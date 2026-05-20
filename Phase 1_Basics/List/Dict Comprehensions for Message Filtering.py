@@ -24,6 +24,8 @@ user_messages = [
     if msg["role"] == "user"
 ]
 
+
 print(f"Original: {len(conversation)} messages")
 print(f"Cleaned: {len(cleaned)} messages")
 print(f"User said: {user_messages}")
+print(cleaned)
