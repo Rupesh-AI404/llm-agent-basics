@@ -6,8 +6,9 @@ conversation = [
     {"role": "assistant", "content": "How can I help?", "timestamp": 4},
     {"role": "user", "content": "What's the weather?", "timestamp": 5},
     {"role": "assistant", "content": "", "timestamp": 6},  # Empty response
-    {"role": "user", "content": "In Tokyo", "timestamp": 7}
-    {"role": "assistant", "content": "What time?", "timestamp": 8}
+    {"role": "user", "content": "In Tokyo", "timestamp": 7},
+    {"role": "assistant", "content": "What time?", "timestamp": 8},
+    {"role": "user", "content": "Anytime", "timestamp": 9},
 ]
 
 # Remove empty or whitespace-only messages
