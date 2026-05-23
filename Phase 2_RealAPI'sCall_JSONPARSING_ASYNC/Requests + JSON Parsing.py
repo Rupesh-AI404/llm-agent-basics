@@ -20,6 +20,7 @@ def web_search(query: str, max_results: int = 5) -> Dict[str, Any]:
     try:
         response = requests.post(url, headers=headers, data=payload, timeout=10)
         response.raise_for_status()  # Raises error if status is not 200
+        response.encoding = 'utf-8'
 
         data = response.json()  # Convert response to Python dict
 
