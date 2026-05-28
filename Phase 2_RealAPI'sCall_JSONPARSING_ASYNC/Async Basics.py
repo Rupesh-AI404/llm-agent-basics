@@ -72,7 +72,7 @@ if __name__ == "__main__":
     all_responses = asyncio.run(handle_multiple_users())
 
     print("-" * 50)
-    print("\n📊 SUMMARY:")
+    print("\n SUMMARY:")
     for result in all_responses:
         if result["success"]:
             print(f"  {result['user_id']}: {result['response'][:60]}...")
