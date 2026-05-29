@@ -40,7 +40,7 @@ async def call_llm_async(
             return {"user_id": user_id, "response": reply, "success": True}
 
     except Exception as e:
-        print(f" User {user_id} failed: {e}")
+        print(f"❌ User {user_id} failed: {e}")
         return {"user_id": user_id, "response": None, "success": False, "error": str(e)}
 
 
