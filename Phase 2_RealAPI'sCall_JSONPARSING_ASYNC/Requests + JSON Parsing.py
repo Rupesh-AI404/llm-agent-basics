@@ -36,7 +36,8 @@ def web_search(query: str, max_results: int = 5) -> Dict[str, Any]:
             "success": True,
             "query": query,
             "results": results,
-            "total_found": len(results)
+            "total_found": len(results),
+            "search_engine": "Google"
         }
 
     except requests.exceptions.Timeout:
