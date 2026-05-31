@@ -190,6 +190,7 @@ def call_llm_with_tools(prompt: str, tools: ToolRegistry) -> Dict[str, Any]:
     response = requests.post(url, headers=headers, json=payload)
     response.raise_for_status()
     result = response.json()
+    print(f"LLM response: {result}")
 
     return result["choices"][0]["message"]
 
