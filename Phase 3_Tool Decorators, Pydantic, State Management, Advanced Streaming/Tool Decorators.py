@@ -14,6 +14,7 @@ class Tool:
         self.name = name
         self.description = description
         self.parameters = parameters
+        self.func.__name__ = name
 
     def __call__(self, *args, **kwargs):
         """Allow the tool to be called like a normal function."""
