@@ -106,3 +106,4 @@ valid_email = '{"to": "user@example.com", "subject": "Meeting", "body": "Let\'s 
 result = extract_structured_data(valid_email, EmailAction)
 if result:
     print(f"✅ Valid email: to={result.to}, subject={result.subject}")
+    print(f"   (capitalized email: {result.to})")
