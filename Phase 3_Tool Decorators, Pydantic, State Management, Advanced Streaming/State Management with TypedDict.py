@@ -74,6 +74,7 @@ print("Initial state:")
 print(f"  User: {state['user_id']}")
 print(f"  Messages: {len(state['messages'])}")
 print(f"  Extracted: {state['extracted']}")
+print(f"  Last action: {state['last_action']}")
 
 print("\nAdding messages...")
 state = add_message(state, "user", "Book a flight to Tokyo")
