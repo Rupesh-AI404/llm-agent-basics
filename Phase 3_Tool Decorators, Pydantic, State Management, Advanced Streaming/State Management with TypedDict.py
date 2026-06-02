@@ -85,6 +85,7 @@ print(f"Last message: {state['messages'][-1]['content']}")
 print("\nExtracting data...")
 state = update_extracted_data(state, "destination", "Tokyo")
 print(f"Extracted destination: {state['extracted']['destination']}")
+print(f"Extracted date: {state['extracted']['date']}")
 
 # With TypedDict, your IDE will suggest:
 # state["extracted"]["destination"]  ← auto-completes!
