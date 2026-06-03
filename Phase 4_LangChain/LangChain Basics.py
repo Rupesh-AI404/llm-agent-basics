@@ -24,7 +24,8 @@ def get_weather(city: str) -> str:
     weather_data = {
         "tokyo": "72°F, sunny",
         "london": "65°F, cloudy",
-        "new york": "80°F, humid"
+        "new york": "80°F, humid",
+        "kathmandu": "68°F, clear"
     }
     city_lower = city.lower()
     return weather_data.get(city_lower, f"Weather data not available for {city}")
