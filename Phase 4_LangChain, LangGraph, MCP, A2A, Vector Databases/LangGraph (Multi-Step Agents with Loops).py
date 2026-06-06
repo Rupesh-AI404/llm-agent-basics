@@ -221,7 +221,6 @@ def run_research_agent(query: str):
     print("FINAL ANSWER:")
     print("=" * 60)
     print(final_state['final_answer'])
-    print("-" * 60)
 
     print("\n" + "=" * 60)
     print(f"📊 STATISTICS:")
