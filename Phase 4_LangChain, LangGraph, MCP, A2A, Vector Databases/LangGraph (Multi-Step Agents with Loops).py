@@ -228,6 +228,7 @@ def run_research_agent(query: str):
     print(f"   Iterations: {final_state['iterations']}")
     print(f"   Sources found: {len(final_state['search_results'])}")
     print(f"   Articles read: {len(final_state['articles_read'])}")
+    print("=" * 60)
 
     return final_state
 
