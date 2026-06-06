@@ -11,7 +11,6 @@ import operator
 
 load_dotenv()
 
-
 # ============= STEP 1: DEFINE OUR TOOLS =============
 @tool
 def search_web(query: str) -> str:
