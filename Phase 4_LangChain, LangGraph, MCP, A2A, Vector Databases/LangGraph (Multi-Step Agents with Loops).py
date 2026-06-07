@@ -6,7 +6,6 @@ from typing import TypedDict, List, Annotated
 from langchain_openai import ChatOpenAI
 from langchain.tools import tool
 from langgraph.graph import StateGraph, END
-from langgraph.checkpoint import MemorySaver
 import operator
 
 load_dotenv()
