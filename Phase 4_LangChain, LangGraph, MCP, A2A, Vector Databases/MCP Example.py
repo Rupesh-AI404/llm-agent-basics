@@ -5,6 +5,8 @@ import json
 from typing import Dict, Any, List
 from dataclasses import dataclass
 from enum import Enum
+import os
+from dotenv import load_dotenv
 
 
 # ============= MCP SIMULATION (Simplified for Learning) =============
