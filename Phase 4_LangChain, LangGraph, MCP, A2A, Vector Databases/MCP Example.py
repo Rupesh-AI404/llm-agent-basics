@@ -221,6 +221,7 @@ async def run_mcp_agent():
     print("=" * 60)
     print("MCP (MODEL CONTEXT PROTOCOL) DEMO")
     print("=" * 60)
+    print("This demo shows how to use MCP to access data from multiple sources.")
 
     # Create client
     client = MCPClient()
