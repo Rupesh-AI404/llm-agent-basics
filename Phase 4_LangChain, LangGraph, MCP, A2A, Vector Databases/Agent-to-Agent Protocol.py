@@ -391,6 +391,7 @@ async def run_a2a_demo():
     print("\n" + "=" * 60)
     print("💬 CONVERSATIONS")
     print("=" * 60)
+    print("This is a simplified chat interface. In production, this would be your chatbot.")
 
     # Test 1: Weather query
     print("\n--- TEST 1: WEATHER QUERY ---")
