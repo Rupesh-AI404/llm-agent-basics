@@ -369,6 +369,7 @@ async def run_a2a_demo():
     print("=" * 60)
     print("A2A (AGENT-TO-AGENT) PROTOCOL DEMO")
     print("=" * 60)
+    print("This demo shows how agents can communicate with each other.")
 
     # Create specialized agents
     print("\n🏗️ CREATING AGENTS:")
