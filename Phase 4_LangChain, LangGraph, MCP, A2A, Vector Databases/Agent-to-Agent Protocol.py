@@ -254,6 +254,7 @@ class EmailAgent(BaseAgent):
             task = self.create_task("send_email", {"to": "user@example.com", "body": message.content}, message.sender)
             result = self.execute_task(task)
             return f"Email sent successfully. {result}"
+            print(f"Email sent successfully. {result}")
         else:
             return f"I only handle email tasks. You asked about: {message.content}"
 
