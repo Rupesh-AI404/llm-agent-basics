@@ -544,6 +544,7 @@ async def main():
         last = history[-1]
         print(f"     User: {last['user'][:50]}...")
         print(f"     Agent: {last['agent'][:50]}...")
+        print("=" * 60)
 
 
 if __name__ == "__main__":
