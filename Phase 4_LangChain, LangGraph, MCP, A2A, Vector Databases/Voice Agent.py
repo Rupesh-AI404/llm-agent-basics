@@ -486,6 +486,7 @@ class ProductionVoiceAgent:
         print("  • 'Send an email to boss@company.com'")
         print("  • 'Search for AI news'")
         print("-" * 60)
+        print("Note: This is a simulated voice input session.")
 
         while True:
             user_input = input("\n🎤 You: ").strip()
