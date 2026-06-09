@@ -267,13 +267,11 @@ def create_voice_agent():
     workflow.add_node("detect_intent", detect_intent)
     workflow.add_node("process_intent", process_intent)
     workflow.add_node("stream_response", stream_response)
-    workflow.add_node(END, lambda state: state)
 
     workflow.set_entry_point("detect_intent")
     workflow.add_edge("detect_intent", "process_intent")
     workflow.add_edge("process_intent", "stream_response")
     workflow.add_edge("stream_response", END)
-    workflow.add_edge("detect_intent", END)
 
     memory = MemorySaver()
     return workflow.compile(checkpointer=memory)
