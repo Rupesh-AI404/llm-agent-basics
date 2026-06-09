@@ -532,3 +532,19 @@ async def main():
     # Run interactive session
     await agent.run_interactive_session()
 
+    # Show final stats
+    print("\n" + "=" * 60)
+    print("📊 SESSION SUMMARY")
+    print("=" * 60)
+    history = agent.get_conversation_history()
+    print(f"   Total interactions: {len(history)}")
+
+    if history:
+        print("\n   Last interaction:")
+        last = history[-1]
+        print(f"     User: {last['user'][:50]}...")
+        print(f"     Agent: {last['agent'][:50]}...")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
