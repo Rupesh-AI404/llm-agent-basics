@@ -337,6 +337,7 @@ class VoiceOrchestrator(BaseAgent):
         """Run the LangGraph agent for complex tasks."""
         print(f"\n🤖 Running LangGraph agent...")
         print(f"   Input: {text}")
+        print(f"   History:")
 
         initial_state = {
             "user_input": text,
