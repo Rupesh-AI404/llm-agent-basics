@@ -336,6 +336,7 @@ class VoiceOrchestrator(BaseAgent):
     async def run_langgraph_agent(self, text: str) -> str:
         """Run the LangGraph agent for complex tasks."""
         print(f"\n🤖 Running LangGraph agent...")
+        print(f"   Input: {text}")
 
         initial_state = {
             "user_input": text,
