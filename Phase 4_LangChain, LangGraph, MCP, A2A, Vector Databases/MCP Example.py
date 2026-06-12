@@ -256,6 +256,9 @@ async def run_mcp_agent():
     print("   Agent: 'I need to read the quarterly report'")
     resource = await client.read("filesystem:///data/report.txt")
     print(f"   Result: {resource.content[:100]}...")
+    print("   Agent: 'What does the report say about revenue?'")
+    # In production, your agent would use an LLM to parse the report content
+    print("   Agent: 'Revenue is $10.2M, up 15% from Q3.'")
 
     # Example 2: Call a tool
     print("\n🔧 EXAMPLE 2: Calling a tool")
