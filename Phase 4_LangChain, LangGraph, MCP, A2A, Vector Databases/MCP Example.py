@@ -265,6 +265,9 @@ async def run_mcp_agent():
     print("   Agent: 'List files in the /data directory'")
     result = await client.call("filesystem", "list_files", {"directory": "/data"})
     print(f"   Result: {result}")
+    print("   Agent: 'Read the contents of report.txt'")
+    result = await client.call("filesystem", "read_file", {"path": "/data/report.txt"})
+    print(f"   Result: {result}")
 
     # Example 3: Query database
     print("\n🗄️ EXAMPLE 3: Querying database")
