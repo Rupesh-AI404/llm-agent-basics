@@ -339,6 +339,7 @@ class VoiceOrchestrator(BaseAgent):
         print(f"   Input: {text}")
         print(f"   History:")
 
+
         initial_state = {
             "user_input": text,
             "transcribed_text": text,
