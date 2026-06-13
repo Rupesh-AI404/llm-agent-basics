@@ -546,6 +546,7 @@ async def main():
     print("=" * 60)
     history = agent.get_conversation_history()
     print(f"   Total interactions: {len(history)}")
+    print(f"   Conversation ID: {stats['conversation_id']}")
 
     if history:
         print("\n   Last interaction:")
