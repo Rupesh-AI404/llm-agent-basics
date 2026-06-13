@@ -554,6 +554,10 @@ async def main():
         print(f"     User: {last['user'][:50]}...")
         print(f"     Agent: {last['agent'][:50]}...")
         print("=" * 60)
+        print("   Conversation History:")
+        for i, interaction in enumerate(history):
+            print(f"   {i+1}. User: {interaction['user'][:50]}...")
+            print(f"        Agent: {interaction['agent'][:50]}...")
 
 
 if __name__ == "__main__":
