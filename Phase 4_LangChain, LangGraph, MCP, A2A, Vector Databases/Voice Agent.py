@@ -536,6 +536,7 @@ async def main():
     print(f"   Conversation ID: {stats['conversation_id']}")
     print(f"   Available Agents: {', '.join(stats['available_agents'])}")
     print(f"   MCP Servers: {', '.join(stats['connected_mcp_servers'])}")
+    print(f"   Total Interactions: {stats['total_interactions']}")
 
     # Run interactive session
     await agent.run_interactive_session()
