@@ -342,6 +342,7 @@ class VoiceOrchestrator(BaseAgent):
         for i, msg in enumerate(self.conversation_history):
             print(f"      {i+1}. {msg['role'].upper()}: {msg['content']}")
         print(f"      {'-' * 20}")
+        print(f"   Current state: Initializing...")
 
 
         initial_state = {
