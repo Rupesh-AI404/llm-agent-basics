@@ -453,7 +453,7 @@ class ProductionVoiceAgent:
         self.history = []
 
         print("\n✅ Voice Agent Ready!")
-        print("=" * 60)
+
 
     async def process_voice_input(self, transcribed_text: str) -> str:
         """
