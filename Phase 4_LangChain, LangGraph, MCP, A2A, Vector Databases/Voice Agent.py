@@ -249,6 +249,7 @@ def create_voice_agent():
     async def stream_response(state: VoiceAgentState) -> VoiceAgentState:
         print(f"\n🔊 [STREAMING] Response:")
         print("-" * 40)
+        print(f"   {state['final_response'][:100]}...")
 
         # Simulate streaming word by word
         words = state['final_response'].split()
