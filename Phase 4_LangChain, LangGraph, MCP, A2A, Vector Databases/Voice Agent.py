@@ -302,7 +302,6 @@ class VoiceOrchestrator(BaseAgent):
         print(f"\n{'=' * 60}")
         print(f"🎤 VOICE COMMAND: {voice_text}")
 
-
         # Store in history
         self.conversation_history.append({"role": "user", "content": voice_text})
 
