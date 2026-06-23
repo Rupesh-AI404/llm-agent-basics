@@ -281,7 +281,8 @@ async def run_mcp_agent():
     result = await client.call("vectorstore", "search", {"query": "AI agents", "top_k": 3})
     print(f"   Result: {result}")
     print("\n" + "=" * 60)
-
+    print("AGENT SUMMARY")
+    print("=" * 60)
 
     return client
 
