@@ -338,9 +338,7 @@ class VoiceOrchestrator(BaseAgent):
         print(f"\n🤖 Running LangGraph agent...")
         print(f"   Input: {text}")
         print(f"   History:")
-        print(f"      {'-' * 20}")
-        for i, msg in enumerate(self.conversation_history):
-            print(f"      {i+1}. {msg['role'].upper()}: {msg['content']}")
+
         print(f"      {'-' * 20}")
         for i, msg in enumerate(self.conversation_history):
             print(f"      {i+1}. {msg['role'].upper()}: {msg['content']}")
