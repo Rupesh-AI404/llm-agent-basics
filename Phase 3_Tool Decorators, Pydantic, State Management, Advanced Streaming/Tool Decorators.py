@@ -192,6 +192,7 @@ def call_llm_with_tools(prompt: str, tools: ToolRegistry) -> Dict[str, Any]:
     response.raise_for_status()
     result = response.json()
     print(f"LLM response: {result}")
+    print(f"Tool call: {result['choices'][0]['message']['tool_calls'][0]}")
 
     return result["choices"][0]["message"]
     return result["choices"][0]["message"]["tool_calls"][0]["function"]
