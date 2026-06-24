@@ -212,6 +212,7 @@ def run_agent_demo():
     print("AVAILABLE TOOLS:")
     for tool in registry.tools.values():
         print(f"  • {tool.name}: {tool.description}")
+        print(f"    Parameters: {tool.parameters}")
 
     # Test 1: Call tool directly (no LLM)
     print("\n" + "=" * 60)
