@@ -209,6 +209,7 @@ def run_agent_demo():
     registry.register(search_web)
     registry.register(get_current_time)
 
+
     print("\n" + "=" * 60)
     print("AVAILABLE TOOLS:")
     for tool in registry.tools.values():
