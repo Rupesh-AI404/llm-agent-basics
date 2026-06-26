@@ -196,6 +196,7 @@ def call_llm_with_tools(prompt: str, tools: ToolRegistry) -> Dict[str, Any]:
 
     return result["choices"][0]["message"]
     return result["choices"][0]["message"]["tool_calls"][0]["function"]
+    return result["choices"][0]["message"]["tool_calls"][0]["function"]["arguments"]
 
 
 # ============= DEMO =============
