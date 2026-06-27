@@ -19,3 +19,4 @@ def route_intent(user_input: str):
 user_input = "What's the weather like in Kathmandu?"
 action = route_intent(user_input)
 print(f"Agent decided to: {action}")
+print(f"User input: {user_input}")
