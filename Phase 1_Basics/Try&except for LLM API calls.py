@@ -26,6 +26,10 @@ def call_llm_with_fallback(prompt: str):
         print(f"Connection error: {e}")
         return {"error": "connection_error", "details": str(e)}
 
+    except requests.exceptions.Timeout as e:
+        print(f"Timeout error: {e}")
+        return {"error": "timeout_error", "details": str(e)}
+
 
 def mock_llm_call(prompt):
     # Simulates LLM returning malformed JSON
