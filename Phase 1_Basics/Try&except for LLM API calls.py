@@ -28,7 +28,11 @@ def call_llm_with_fallback(prompt: str):
 
     except requests.exceptions.Timeout as e:
         print(f"Timeout error: {e}")
-        return {"error": "timeout_error", "details": str(e)}
+        return {"error": "timeout_error", "details": str(e)}\
+
+    except requests.exceptions.TooManyRedirects as e:
+        print(f"Too many redirects error: {e}")
+        return {"error": "too_many_redirects", "details": str(e)}
 
 
 def mock_llm_call(prompt):
