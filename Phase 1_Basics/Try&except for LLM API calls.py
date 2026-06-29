@@ -24,6 +24,7 @@ def call_llm_with_fallback(prompt: str):
 
     except requests.exceptions.ConnectionError as e:
         print(f"Connection error: {e}")
+        return {"error": "connection_error", "details": str(e)}
 
 
 def mock_llm_call(prompt):
