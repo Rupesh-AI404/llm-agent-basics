@@ -1,4 +1,8 @@
 import json
+
+import requests
+
+
 def call_llm_with_fallback(prompt: str):
     """LLMs fail constantly. Plan for it."""
     try:
@@ -17,6 +21,9 @@ def call_llm_with_fallback(prompt: str):
     except Exception as e:
         print(f"Unknown disaster: {e}")
         return {"error": "unknown", "details": str(e)}
+
+    except requests.exceptions.ConnectionError as e:
+        print(f"Connection error: {e}")
 
 
 def mock_llm_call(prompt):
