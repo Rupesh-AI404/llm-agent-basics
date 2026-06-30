@@ -42,8 +42,6 @@ def call_llm_with_fallback(prompt: str):
         print(f"Unknown error: {e}")
         return {"error": "unknown", "details": str(e)}
 
-    except:
-        return {"error": "unknown"}
 
 
 def mock_llm_call(prompt):
