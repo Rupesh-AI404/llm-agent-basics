@@ -38,6 +38,10 @@ def call_llm_with_fallback(prompt: str):
         print(f"Request exception: {e}")
         return {"error": "request_exception", "details": str(e)}
 
+    except Exception as e:
+        print(f"Unknown error: {e}")
+        return {"error": "unknown", "details": str(e)}
+
 
 def mock_llm_call(prompt):
     # Simulates LLM returning malformed JSON
