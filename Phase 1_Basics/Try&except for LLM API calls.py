@@ -34,6 +34,10 @@ def call_llm_with_fallback(prompt: str):
         print(f"Too many redirects error: {e}")
         return {"error": "too_many_redirects", "details": str(e)}
 
+    except requests.exceptions.RequestException as e:
+        print(f"Request exception: {e}")
+        return {"error": "request_exception", "details": str(e)}
+
 
 def mock_llm_call(prompt):
     # Simulates LLM returning malformed JSON
