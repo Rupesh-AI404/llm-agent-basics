@@ -108,3 +108,4 @@ if result:
     print(f"✅ Valid email: to={result.to}, subject={result.subject}")
     print(f"   (capitalized email: {result.to})")
     print(f"   (auto-capitalized subject: {result.subject})")
+    print(f"   (auto-capitalized body: {result.body[:10]}...)")
