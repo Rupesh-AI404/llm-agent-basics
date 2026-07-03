@@ -45,3 +45,4 @@ result = extract_action_from_llm_response(
     ["search_email", "send_email", "delete_email"]
 )
 print(result)
+print(result["action"])
