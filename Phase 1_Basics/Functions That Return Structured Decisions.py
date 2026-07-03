@@ -47,3 +47,4 @@ result = extract_action_from_llm_response(
 print(result)
 print(result["action"])
 print(result["parameters"])
+print(result["is_valid"])
