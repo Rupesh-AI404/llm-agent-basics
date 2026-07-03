@@ -109,3 +109,4 @@ if result:
     print(f"   (capitalized email: {result.to})")
     print(f"   (auto-capitalized subject: {result.subject})")
     print(f"   (auto-capitalized body: {result.body[:10]}...)")
+    print(f"   (auto-capitalized priority: {result.priority})")
