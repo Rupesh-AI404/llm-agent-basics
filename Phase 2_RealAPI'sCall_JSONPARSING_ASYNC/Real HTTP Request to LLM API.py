@@ -57,3 +57,4 @@ user_question = "What is the capital of Japan?"
 answer = call_openai(user_question)
 print(f"User: {user_question}")
 print(f"AI: {answer}")
+print("-" * 50)
