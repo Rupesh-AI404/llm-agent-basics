@@ -418,6 +418,11 @@ async def run_a2a_demo():
     for task in all_tasks:
         status = "✅" if task.state == TaskState.COMPLETED else "⏳"
         print(f"  {status} {task.type} ({task.assigned_to}) - {task.state.value}")
+        print(f"    {task.parameters}")
+        if task.result:
+            print(f"    Result: {task.result}")
+        if task.error:
+            print(f"    Error: {task.error}")
 
 
 if __name__ == "__main__":
