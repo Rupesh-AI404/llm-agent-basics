@@ -377,6 +377,7 @@ async def run_a2a_demo():
     email_agent = EmailAgent()
     orchestrator = OrchestratorAgent()
 
+
     # Register agents with each other
     print("\n🔗 REGISTERING AGENTS:")
     orchestrator.register_agent(weather_agent)

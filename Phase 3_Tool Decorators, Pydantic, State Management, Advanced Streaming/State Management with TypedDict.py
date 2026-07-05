@@ -76,6 +76,7 @@ print(f"  Messages: {len(state['messages'])}")
 print(f"  Extracted: {state['extracted']}")
 print(f"  Last action: {state['last_action']}")
 print(f"  Pending confirmation: {state['pending_confirmation']}")
+print("-" * 50)
 
 print("\nAdding messages...")
 state = add_message(state, "user", "Book a flight to Tokyo")
