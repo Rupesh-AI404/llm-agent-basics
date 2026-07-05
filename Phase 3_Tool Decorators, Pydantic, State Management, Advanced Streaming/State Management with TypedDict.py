@@ -26,6 +26,7 @@ class AgentState(TypedDict):
     extracted: ExtractedData
     last_action: Optional[str]
     pending_confirmation: bool
+    straight_to_assistant: bool = False
 
 
 # ============= USING TYPED DICTS =============
