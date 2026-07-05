@@ -239,6 +239,8 @@ def run_agent_demo():
     # Uncomment to test with real API
     llm_response = call_llm_with_tools("What's the weather in Paris?", registry)
     print(f"LLM decided: {llm_response}")
+    print(f"Tool call: {llm_response['tool_calls'][0]}")
+    print(f"Tool result: {llm_response['tool_calls'][0]['function']['arguments']}")
 
 
 if __name__ == "__main__":
