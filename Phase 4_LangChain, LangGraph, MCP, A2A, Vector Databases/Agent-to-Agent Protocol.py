@@ -423,6 +423,9 @@ async def run_a2a_demo():
             print(f"    Result: {task.result}")
         if task.error:
             print(f"    Error: {task.error}")
+        if task.created_by:
+            print(f"    Created by: {task.created_by}")
+        print()
 
 
 if __name__ == "__main__":
