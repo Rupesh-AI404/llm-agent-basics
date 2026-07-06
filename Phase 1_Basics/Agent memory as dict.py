@@ -38,3 +38,6 @@ for word in words:
     if word in ["luggage", "baggage"]:
         conversation_memory["extracted_data"]["preferences"].append(word)
         print(f"User wants {word}!")
+
+    if word in ["yes", "no"]:
+        conversation_memory["pending_confirmation"] = word
