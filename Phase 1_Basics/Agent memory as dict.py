@@ -28,3 +28,6 @@ words = last_message.split()
 for word in words:
     if word in ["kathmandu", "chitwan", "next", "monday"]:
         conversation_memory["extracted_data"]["date"] = word
+
+    if word in ["kathmandu", "chitwan"]:
+        conversation_memory["extracted_data"]["destination"] = word
