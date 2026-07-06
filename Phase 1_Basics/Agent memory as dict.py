@@ -34,3 +34,6 @@ for word in words:
 
     if word in ["one", "two", "three"]:
         conversation_memory["extracted_data"]["passenger_count"] = word
+
+    if word in ["luggage", "baggage"]:
+        conversation_memory["extracted_data"]["preferences"].append(word)
