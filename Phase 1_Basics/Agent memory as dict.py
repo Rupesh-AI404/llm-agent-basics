@@ -31,3 +31,6 @@ for word in words:
 
     if word in ["kathmandu", "chitwan"]:
         conversation_memory["extracted_data"]["destination"] = word
+
+    if word in ["one", "two", "three"]:
+        conversation_memory["extracted_data"]["passenger_count"] = word
