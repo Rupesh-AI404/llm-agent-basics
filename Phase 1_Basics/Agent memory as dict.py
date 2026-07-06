@@ -41,3 +41,4 @@ for word in words:
 
     if word in ["yes", "no"]:
         conversation_memory["pending_confirmation"] = word
+        print(f"User wants confirmation!")
