@@ -39,6 +39,11 @@ for word in words:
         conversation_memory["extracted_data"]["preferences"].append(word)
         print(f"User wants {word}!")
 
+
+    if word in ["flight", "train", "bus"]:
+        conversation_memory["extracted_data"]["travel_mode"] = word
+        print(f"User wants to travel by {word}!")
+
     if word in ["yes", "no"]:
         conversation_memory["pending_confirmation"] = word
         print(f"User wants confirmation!")
