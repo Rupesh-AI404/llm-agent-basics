@@ -51,6 +51,7 @@ for word in words:
         conversation_memory["extracted_data"]["confirmation"] = word
         print(f"User wants confirmation!")
 
+
     if word in ["yes", "no"]:
         conversation_memory["pending_confirmation"] = word
         print(f"User wants confirmation!")
