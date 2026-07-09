@@ -25,6 +25,7 @@ conversation_memory = {
         "passenger_count": None,
         "preferences": [],
         "travel_mode": None,
+        "travel_class": None,
     }
 }
 
