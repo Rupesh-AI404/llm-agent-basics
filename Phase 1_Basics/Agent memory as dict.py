@@ -8,7 +8,8 @@ conversation_memory = {
     "messages": [
         {"role": "user", "content": "Book a flight to Tokyo"},
         {"role": "assistant", "content": "When would you like to depart?"},
-        {"role": "user", "content": "Next Monday"}
+        {"role": "user", "content": "Next Monday"},
+        {"role": "assistant", "content": "What type of travel would you like?"}
     ],
     "extracted_data": {
         "destination": "Kathmandu",
