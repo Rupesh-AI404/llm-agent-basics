@@ -13,7 +13,8 @@ conversation_memory = {
     ],
     "extracted_data": {
         "destination": "Kathmandu",
-        "date": None  # Will fill later
+        "date": None, # Will fill later
+        "passenger_count": None,
     }
 }
 
