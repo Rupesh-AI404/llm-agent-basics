@@ -15,6 +15,7 @@ conversation_memory = {
         "destination": "Kathmandu",
         "date": None, # Will fill later
         "passenger_count": None,
+        "preferences": [],
     }
 }
 
