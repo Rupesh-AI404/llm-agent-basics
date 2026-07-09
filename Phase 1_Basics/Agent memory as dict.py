@@ -9,7 +9,15 @@ conversation_memory = {
         {"role": "user", "content": "Book a flight to Tokyo"},
         {"role": "assistant", "content": "When would you like to depart?"},
         {"role": "user", "content": "Next Monday"},
-        {"role": "assistant", "content": "What type of travel would you like?"}
+        {"role": "assistant", "content": "What type of travel would you like?"},
+        {"role": "user", "content": "Flight"},
+        {"role": "assistant", "content": "How many passengers?"},
+        {"role": "user", "content": "Two"},
+        {"role": "assistant", "content": "Do you have any luggage?"},
+        {"role": "user", "content": "Yes"},
+        {"role": "assistant", "content": "Do you need confirmation?"},
+        {"role": "user", "content": "Yes"},
+        {"role": "assistant", "content": "Thank you! Your flight has been booked."}
     ],
     "extracted_data": {
         "destination": "Kathmandu",
