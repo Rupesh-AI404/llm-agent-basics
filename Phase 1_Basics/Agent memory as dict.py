@@ -21,8 +21,6 @@ conversation_memory = {
         {"role": "user", "content": "What is the weather like in Kathmandu?"},
         {"role": "assistant", "content": "It's sunny and warm."},
         {"role": "user", "content": "What is the weather like in Kathmandu?"},
-
-
     ],
     "extracted_data": {
         "destination": "Kathmandu",
@@ -75,3 +73,5 @@ for word in words:
     if word in ["yes", "no"]:
         conversation_memory["pending_confirmation"] = word
         print(f"User wants confirmation!")
+
+
