@@ -20,6 +20,7 @@ conversation_memory = {
         {"role": "assistant", "content": "Thank you! Your flight has been booked."},
         {"role": "user", "content": "What is the weather like in Kathmandu?"},
         {"role": "assistant", "content": "It's sunny and warm."}
+        {"role": "user", "content": "What is the weather like in Kathmandu?"},
     ],
     "extracted_data": {
         "destination": "Kathmandu",
