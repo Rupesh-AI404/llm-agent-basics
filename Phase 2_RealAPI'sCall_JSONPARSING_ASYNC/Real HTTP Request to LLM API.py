@@ -29,7 +29,8 @@ def call_openai(prompt: str) -> str:
         "messages": [
             {"role": "user", "content": prompt}  # What you want to say
         ],
-        "temperature": 0.7  # How creative to be (0=robot, 1=wild)
+        "temperature": 0.7,  # How creative to be (0=robot, 1=wild)
+        "max_tokens": 150  # How long the response can be
     }
 
     try:
