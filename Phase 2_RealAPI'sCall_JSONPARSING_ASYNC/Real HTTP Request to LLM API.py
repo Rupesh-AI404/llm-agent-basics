@@ -19,7 +19,8 @@ def call_openai(prompt: str) -> str:
     # Your ID badge to prove you're allowed in
     headers = {
         "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "User-Agent": "My-Agent/1.0.0"
     }
 
     # The actual message you're sending
