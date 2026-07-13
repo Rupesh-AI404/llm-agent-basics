@@ -51,6 +51,9 @@ def call_openai(prompt: str) -> str:
         print(f"API call failed: {e}")
         return None
 
+    finally:
+        print("API call completed.")
+
 
 # Use it
 user_question = "What is the capital of Japan?"
