@@ -42,6 +42,7 @@ def call_openai(prompt: str) -> str:
 
         # Convert JSON string to Python dictionary
         result = response.json()
+        response.close()
 
         # Navigate through the nested response to get the text
         # OpenAI returns: result["choices"][0]["message"]["content"]
