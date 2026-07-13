@@ -53,6 +53,7 @@ def call_openai(prompt: str) -> str:
 
     finally:
         print("API call completed.")
+        return None
 
 
 # Use it
