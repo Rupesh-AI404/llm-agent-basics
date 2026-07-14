@@ -20,7 +20,8 @@ def call_openai(prompt: str) -> str:
     headers = {
         "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}",
         "Content-Type": "application/json",
-        "User-Agent": "My-Agent/1.0.0"
+        "User-Agent": "My-Agent/1.0.0",
+        "OpenAI-Organization": "org-12345"
     }
 
     # The actual message you're sending
