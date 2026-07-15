@@ -28,7 +28,8 @@ def call_openai(prompt: str) -> str:
     payload = {
         "model": "gpt-3.5-turbo",  # Which OpenAI brain to use
         "messages": [
-            {"role": "user", "content": prompt}  # What you want to say
+            {"role": "user", "content": prompt},  # What you want to say
+            { "role": "system", "content": "You are a helpful assistant."}
         ],
         "temperature": 0.7,  # How creative to be (0=robot, 1=wild)
         "max_tokens": 150,  # How long the response can be
