@@ -30,7 +30,8 @@ def call_openai(prompt: str) -> str:
         "messages": [
             {"role": "user", "content": prompt},  # What you want to say
             { "role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": "What is the capital of Japan?"}
+            {"role": "user", "content": "What is the capital of Japan?"},
+            {"role": "assistant", "content": "Tokyo"},
         ],
         "temperature": 0.7,  # How creative to be (0=robot, 1=wild)
         "max_tokens": 150,  # How long the response can be
