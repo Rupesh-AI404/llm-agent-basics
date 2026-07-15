@@ -45,6 +45,7 @@ def call_openai(prompt: str) -> str:
         # Convert JSON string to Python dictionary
         result = response.json()
         response.close()
+        print(f"API response: {result}")
 
         # Navigate through the nested response to get the text
         # OpenAI returns: result["choices"][0]["message"]["content"]
@@ -59,6 +60,7 @@ def call_openai(prompt: str) -> str:
     finally:
         print("API call completed.")
         return None
+
 
 
 # Use it
