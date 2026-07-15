@@ -32,7 +32,8 @@ def call_openai(prompt: str) -> str:
         ],
         "temperature": 0.7,  # How creative to be (0=robot, 1=wild)
         "max_tokens": 150,  # How long the response can be
-        "top_p": 1
+        "top_p": 1,
+        "frequency_penalty": 0,
     }
 
     try:
