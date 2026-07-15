@@ -22,7 +22,8 @@ def call_openai(prompt: str) -> str:
         "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}",
         "Content-Type": "application/json",
         "User-Agent": "My-Agent/1.0.0",
-        "OpenAI-Organization": "org-12345"
+        "OpenAI-Organization": "org-12345",
+        "OpenAI-Beta": "assistants=v2"
     }
 
     # The actual message you're sending
