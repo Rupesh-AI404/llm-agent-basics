@@ -43,6 +43,7 @@ def call_openai(prompt: str) -> str:
         "max_tokens": 150,  # How long the response can be
         "top_p": 1,
         "frequency_penalty": 0,
+        "presence_penalty": 0,
     }
 
     try:
