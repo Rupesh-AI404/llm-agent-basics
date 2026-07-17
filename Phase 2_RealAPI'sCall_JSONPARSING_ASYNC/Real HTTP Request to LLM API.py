@@ -23,7 +23,8 @@ def call_openai(prompt: str) -> str:
         "Content-Type": "application/json",
         "User-Agent": "My-Agent/1.0.0",
         "OpenAI-Organization": "org-12345",
-        "OpenAI-Beta": "assistants=v2"
+        "OpenAI-Beta": "assistants=v2",
+        "OpenAI-Beta-Assistant": "asst_12345"
     }
 
     # The actual message you're sending
