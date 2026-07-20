@@ -45,6 +45,7 @@ def call_openai(prompt: str) -> str:
         "frequency_penalty": 0,
         "presence_penalty": 0,
         "stream": False,
+        "n": 1,
     }
 
     try:
