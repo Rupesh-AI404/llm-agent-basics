@@ -56,6 +56,7 @@ async def handle_multiple_users():
             call_llm_async(session, "Tell me a short joke about programming.", "user_2"),
             call_llm_async(session, "What's the capital of France?", "user_3"),
             call_llm_async(session, "What's the meaning of life?", "user_4"),
+            call_llm_async(session, "What's the weather in Paris?", "user_5"),
         ]
 
         # Run all tasks at the same time and wait for ALL to complete
