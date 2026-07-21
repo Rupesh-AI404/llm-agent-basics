@@ -81,3 +81,5 @@ if __name__ == "__main__":
             print(f"    {result['response']}")
             print("-" * 50)
 
+        results = asyncio.run(handle_multiple_users())
+
