@@ -284,6 +284,19 @@ async def run_mcp_agent():
     print("AGENT SUMMARY")
     print("=" * 60)
 
+
+    # Example 5: Agent summarization
+    print("   Agent: 'Summarizing all findings from resources and tools.'")
+    summary = (
+        f"Summary:\n"
+        f"- Quarterly Report: Revenue is $10.2M, up 15% from Q3.\n"
+        f"- Files in /data: report.txt, data.csv, config.json\n"
+        f"- Database Users: 2 users (Alice, Bob)\n"
+        f"- Vector Search: Found 3 documents about AI agents."
+    )
+    print(f"   Result: {summary}")
+
+
     return client
 
 
