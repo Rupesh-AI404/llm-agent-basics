@@ -295,6 +295,7 @@ async def run_mcp_agent():
         f"- Vector Search: Found 3 documents about AI agents."
     )
     print(f"   Result: {summary}")
+    print("\n" + "=" * 60)
 
 
     return client
