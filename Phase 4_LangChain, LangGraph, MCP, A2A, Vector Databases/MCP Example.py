@@ -286,6 +286,7 @@ async def run_mcp_agent():
     # Example 5: Agent summarization
     print("   Agent: 'Summarizing all findings from resources and tools.'")
     result = await client.call("vectorstore", "search", {"query": "AI agents", "top_k": 3})
+    print(f"   Result: {result}")
 
 
 
