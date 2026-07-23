@@ -283,6 +283,9 @@ async def run_mcp_agent():
     print("\n" + "=" * 60)
     print("AGENT SUMMARY")
 
+    # Example 5: Agent summarization
+    print("   Agent: 'Summarizing all findings from resources and tools.'")
+
 
 
     # Example 5: Agent summarization
