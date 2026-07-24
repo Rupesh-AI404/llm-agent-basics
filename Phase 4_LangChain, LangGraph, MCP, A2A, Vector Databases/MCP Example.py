@@ -289,6 +289,10 @@ async def run_mcp_agent():
     print(f"   Result: {result}")
     print("\n" + "=" * 60)
 
+    # ============= SIMULATING MCP SERVERS =============
+    print("\n" + "=" * 60)
+
+
 
 
     # Example 5: Agent summarization
