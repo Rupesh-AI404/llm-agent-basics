@@ -330,6 +330,7 @@ def create_mcp_tools_for_langchain(client: MCPClient):
         # Update the wrapper's metadata
         wrapper.__name__ = mcp_tool.name
         wrapper.__doc__ = mcp_tool.description
+        wrapper.input_schema = mcp_tool.input_schema
         return wrapper
 
     # This would create tools dynamically
