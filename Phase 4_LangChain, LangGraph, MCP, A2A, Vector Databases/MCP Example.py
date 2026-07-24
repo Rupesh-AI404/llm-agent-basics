@@ -340,6 +340,7 @@ def create_mcp_tools_for_langchain(client: MCPClient):
             "name": tool.name,
             "description": tool.description,
             "server": server_name
+
         }
         for server_name, server in client.servers.items()
         for tool in server.tools.values()
