@@ -246,7 +246,10 @@ def run_agent_demo():
     print(json.dumps(llm_response, indent=2))
     print("---")
 
-  
+    #Test 5: LLM decides which tool to use
+    print("\n" + "=" * 60)
+
+
 
 
 
