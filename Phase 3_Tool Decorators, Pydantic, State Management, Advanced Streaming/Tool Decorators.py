@@ -248,6 +248,7 @@ def run_agent_demo():
 
     #Test 5: LLM decides which tool to use
     print("\n" + "=" * 60)
+    print("TEST 5: LLM tool selection (requires API key)")
 
 
 
