@@ -260,6 +260,8 @@ def run_agent_demo():
 
 
 
+
+
     # Uncomment to test with real API
     llm_response = call_llm_with_tools("What's the weather in Paris?", registry)
     print(f"LLM decided: {llm_response}")
