@@ -237,22 +237,6 @@ def run_agent_demo():
     print(json.dumps(llm_response, indent=2))
     print("---")
 
-    #Test 4: LLM decides which tool to use
-    print("\n" + "=" * 60)
-    print("TEST 4: LLM tool selection (requires API key)")
-    print("Prompt: 'What's the weather in Paris?'")
-    print("Response:")
-    llm_response = call_llm_with_tools("What's the weather in Paris?", registry)
-    print(json.dumps(llm_response, indent=2))
-    print("---")
-
-
-
-
-
-
-
-
 
 
     # Uncomment to test with real API
