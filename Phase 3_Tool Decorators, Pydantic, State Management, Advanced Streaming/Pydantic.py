@@ -99,6 +99,7 @@ result = extract_structured_data(invalid_email, EmailAction)
 if not result:
     print("❌ Invalid email address rejected")
 
+
 #Invalid email (missing @)
 invalid_email = '{"to": "userexample.com", "subject": "Hello", "body": "Hi there"}'
 result = extract_structured_data(invalid_email, EmailAction)
@@ -106,7 +107,6 @@ result = extract_structured_data(invalid_email, EmailAction)
 #Invalid email (missing .)
 invalid_email = '{"to": "user@example", "subject": "Hello", "body": "Hi there"}'
 result = extract_structured_data(invalid_email, EmailAction)
-
 
 
 # Valid email
