@@ -107,6 +107,8 @@ result = extract_structured_data(invalid_email, EmailAction)
 invalid_email = '{"to": "user@example", "subject": "Hello", "body": "Hi there"}'
 result = extract_structured_data(invalid_email, EmailAction)
 
+
+
 # Valid email
 valid_email = '{"to": "user@example.com", "subject": "Meeting", "body": "Let\'s sync at 2pm"}'
 result = extract_structured_data(valid_email, EmailAction)
@@ -116,5 +118,8 @@ if result:
     print(f"   (auto-capitalized subject: {result.subject})")
     print(f"   (auto-capitalized body: {result.body[:10]}...)")
     print(f"   (auto-capitalized priority: {result.priority})")
+    print()
 else:
         print("❌ Email validation failed")
+
+
