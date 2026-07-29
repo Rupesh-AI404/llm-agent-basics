@@ -103,6 +103,10 @@ if not result:
 invalid_email = '{"to": "userexample.com", "subject": "Hello", "body": "Hi there"}'
 result = extract_structured_data(invalid_email, EmailAction)
 
+#Invalid email (missing .)
+invalid_email = '{"to": "user@example", "subject": "Hello", "body": "Hi there"}'
+result = extract_structured_data(invalid_email, EmailAction)
+
 # Valid email
 valid_email = '{"to": "user@example.com", "subject": "Meeting", "body": "Let\'s sync at 2pm"}'
 result = extract_structured_data(valid_email, EmailAction)
