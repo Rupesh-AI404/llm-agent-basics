@@ -41,6 +41,7 @@ def main() -> None:
     if not text:
         raise SystemExit("No text provided.")
 
+
     print(f"Speaking: {text}")
     speak_text(text, rate=args.rate)
 
