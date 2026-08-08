@@ -22,13 +22,13 @@ async def call_llm_async(
         "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}",
         "Content-Type": "application/json",
         "data-encoding": "utf-8",
-        "Accept": "application/json",
+        "Accept": "application/json"
     }
 
     payload = {
         "model": "gpt-3.5-turbo",
         "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.7
+        "temperature": 0.7,
     }
 
     try:
