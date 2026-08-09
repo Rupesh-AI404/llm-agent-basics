@@ -273,6 +273,7 @@ def create_voice_agent():
     workflow.add_edge("detect_intent", "process_intent")
     workflow.add_edge("process_intent", "stream_response")
     workflow.add_edge("stream_response", END)
+    workflow.add_edge("stream_response", "process_intent")
 
     memory = MemorySaver()
     return workflow.compile(checkpointer=memory)
@@ -339,6 +340,7 @@ class VoiceOrchestrator(BaseAgent):
         print(f"   Input: {text}")
         print(f"   History:")
 
+
         print(f"      {'-' * 20}")
         for i, msg in enumerate(self.conversation_history):
             print(f"      {i+1}. {msg['role'].upper()}: {msg['content']}")
@@ -356,6 +358,7 @@ class VoiceOrchestrator(BaseAgent):
             "final_response": "",
             "streaming_buffer": "",
             "current_step": "detect_intent"
+
         }
 
         # Run the graph
