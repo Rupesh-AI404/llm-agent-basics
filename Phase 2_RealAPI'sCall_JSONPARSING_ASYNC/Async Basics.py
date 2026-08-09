@@ -66,6 +66,7 @@ async def handle_multiple_users():
 
         # Run all tasks at the same time and wait for ALL to complete
         results = await asyncio.gather(*tasks)
+        print(results)
 
         return results
 
