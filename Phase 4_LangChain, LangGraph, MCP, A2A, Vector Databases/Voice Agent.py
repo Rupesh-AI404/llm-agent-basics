@@ -429,6 +429,7 @@ class ProductionVoiceAgent:
         # Initialize components
         self.voice_streamer = VoiceStreamingManager()
         self.orchestrator = VoiceOrchestrator()
+        self.weather_agent = WeatherAgent()
 
         # Create and connect specialized agents
         print("\n📡 CONNECTING A2A AGENTS:")
