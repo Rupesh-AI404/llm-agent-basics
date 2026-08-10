@@ -52,8 +52,15 @@ class MessageReplyAgent:
         # Generic acknowledgment for longer messages
         return f"Received: {msg[:200]}"  # truncate to keep replies concise
 
-
-
+    def generate_reply(self, message, context=None):
+        """Return a reply string for the given message."""
+        if self.use_openai:
+            try:
+                return self._llm_reply(message, context)
+            except Exception as e:
+                # fallback on errors
+                return f"(LLM failure) {self._rule_reply(message, context)}"
+        return self._rule_reply(message, context)
 
 
 if __name__ == "__main__":
