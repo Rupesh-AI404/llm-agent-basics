@@ -30,6 +30,7 @@ class MessageReplyAgent:
         self.use_openai = (use_openai if use_openai is not None else bool(self.api_key)) and _HAS_OPENAI
         if self.use_openai and self.api_key:
             openai.api_key = self.api_key
+            self.use_openai = True
 
     def _llm_reply(self, message, context=None):
         system = "You are a helpful assistant that replies concisely."
@@ -70,7 +71,7 @@ if __name__ == "__main__":
     p.add_argument("--use-openai", action="store_true", help="Force using OpenAI (requires openai package and API key)")
     p.add_argument("message", nargs="?", help="Message text; if omitted, read from stdin")
     args = p.parse_args()
-    agent = MessageReplyAgent(model=args.model, use_openai=args.use_openai)
+
 
     if args.message:
         msg = args.message
