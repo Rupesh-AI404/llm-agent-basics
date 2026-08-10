@@ -51,6 +51,8 @@ class MessageReplyAgent:
             return "Thanks for your question — could you provide a little more detail so I can help?"
         if len(msg.split()) < 6:
             return f"Short reply: {msg}"
+
+        parts = msg.split()
         # Generic acknowledgment for longer messages
         return f"Received: {msg[:200]}"  # truncate to keep replies concise
 
