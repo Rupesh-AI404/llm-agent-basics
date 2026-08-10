@@ -70,6 +70,7 @@ if __name__ == "__main__":
     p.add_argument("--use-openai", action="store_true", help="Force using OpenAI (requires openai package and API key)")
     p.add_argument("message", nargs="?", help="Message text; if omitted, read from stdin")
     args = p.parse_args()
+    agent = MessageReplyAgent(model=args.model, use_openai=args.use_openai)
 
     if args.message:
         msg = args.message
@@ -78,3 +79,4 @@ if __name__ == "__main__":
 
     agent = MessageReplyAgent(model=args.model, use_openai=args.use_openai)
     print(agent.generate_reply(msg))
+
