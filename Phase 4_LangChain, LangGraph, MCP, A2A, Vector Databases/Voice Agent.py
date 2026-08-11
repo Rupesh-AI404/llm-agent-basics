@@ -219,7 +219,8 @@ def create_voice_agent():
         if state['intent'] == 'weather':
             # Extract city
             city_match = re.search(r'weather in (\w+)', state['user_input'], re.IGNORECASE)
-            city = city_match.group(1) if city_match else "Tokyo"
+            city = city_match.group(2) if city_match else "Tokyo"
+
 
             result = get_weather(city)
             state['final_response'] = f"The weather in {city} is {result}"
