@@ -85,6 +85,8 @@ if __name__ == "__main__":
         msg = args.message
     else:
         msg = sys.stdin.read().strip()
+        if not msg:
+            raise SystemExit("No message provided.")
 
     agent = MessageReplyAgent(model=args.model, use_openai=args.use_openai)
     print(agent.generate_reply(msg))
