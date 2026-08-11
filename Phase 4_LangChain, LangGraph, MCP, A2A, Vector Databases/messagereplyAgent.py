@@ -69,6 +69,7 @@ class MessageReplyAgent:
         return self._rule_reply(message, context)
 
 
+
 if __name__ == "__main__":
     import argparse
     p = argparse.ArgumentParser(description="Message Replying Agent CLI")
@@ -77,6 +78,7 @@ if __name__ == "__main__":
     p.add_argument("message", nargs="?", help="Message text; if omitted, read from stdin")
     args = p.parse_args()
     print(args)
+    print(args.use_openai)
 
 
     if args.message:
