@@ -51,7 +51,7 @@ class MessageReplyAgent:
             return "Thanks for your question — could you provide a little more detail so I can help?"
         if len(msg.split()) < 6:
             return f"Short reply: {msg}"
-        if len(msg.split()) > 50:
+        if len(msg.split()) > 60:
             return "Thanks for the detailed message! I'll get back to you shortly."
 
         parts = msg.split()
