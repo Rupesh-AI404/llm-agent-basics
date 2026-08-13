@@ -53,6 +53,8 @@ class MessageReplyAgent:
             return f"Short reply: {msg}"
         if len(msg.split()) > 60:
             return "Thanks for the detailed message! I'll get back to you shortly."
+        if len(msg.split()) > 20:
+            return f"Long reply: {msg}"
 
         parts = msg.split()
         # Generic acknowledgment for longer messages
