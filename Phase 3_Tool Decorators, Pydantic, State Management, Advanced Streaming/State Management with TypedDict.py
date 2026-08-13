@@ -82,7 +82,6 @@ print("Initial state:")
 print(f"  User: {state['user_id']}")
 print(f"  Messages: {len(state['messages'])}")
 print(f"  Extracted: {state['extracted']}")
-print(f"  Last action: {state['last_action']}")
 print(f"  Pending confirmation: {state['pending_confirmation']}")
 print("-" * 50)
 
@@ -93,6 +92,7 @@ state = add_message(state, "assistant", "What date would you like to switch?")
 
 print(f"Messages: {len(state['messages'])}")
 print(f"Last message: {state['messages'][-1]['content']}")
+print(f"Last action: {state['last_action']}")
 
 print("\nExtracting data...")
 state = update_extracted_data(state, "destination", "Tokyo")
