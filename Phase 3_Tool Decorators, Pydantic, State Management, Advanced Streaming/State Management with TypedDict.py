@@ -71,6 +71,8 @@ def update_extracted_data(state: AgentState, field: str, value):
         state["messages"][-1][field] = value
     if field in state["messages"][-1]:
         state["messages"][-1][field] = value
+    if field in state["extracted"]:
+        state["extracted"].pop(field)
     return state
 
 
