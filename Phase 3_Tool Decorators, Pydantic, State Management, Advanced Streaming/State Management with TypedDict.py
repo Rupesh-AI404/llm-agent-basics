@@ -89,6 +89,7 @@ print("-" * 50)
 print("\nAdding messages...")
 state = add_message(state, "user", "Book a flight to Tokyo")
 state = add_message(state, "assistant", "What date would you like to fly?")
+state = add_message(state, "assistant", "What date would you like to switch?")
 
 print(f"Messages: {len(state['messages'])}")
 print(f"Last message: {state['messages'][-1]['content']}")
