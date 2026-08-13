@@ -67,6 +67,8 @@ def update_extracted_data(state: AgentState, field: str, value):
     """Update extracted data with validation."""
     if field in state["extracted"]:
         state["extracted"][field] = value  # type: ignore
+    if field in state["messages"]:
+        state["messages"][-1][field] = value
     return state
 
 
