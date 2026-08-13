@@ -55,7 +55,8 @@ def add_message(state: AgentState, role: str, content: str) -> AgentState:
     message: Message = {
         "role": role,  # type: ignore (Literal check)
         "content": content,
-        "timestamp": datetime.now()
+        "timestamp": datetime.now(),
+        "straight_to_assistant": False,
     }
 
     state["messages"].append(message)
