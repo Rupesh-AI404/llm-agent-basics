@@ -69,6 +69,8 @@ def update_extracted_data(state: AgentState, field: str, value):
         state["extracted"][field] = value  # type: ignore
     if field in state["messages"]:
         state["messages"][-1][field] = value
+    if field in state["messages"][-1]:
+        state["messages"][-1][field] = value
     return state
 
 
