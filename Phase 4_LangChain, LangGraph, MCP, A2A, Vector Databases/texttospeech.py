@@ -18,6 +18,7 @@ def speak_text(text: str, rate: int = 180) -> None:
     engine.setProperty("rate", rate)
     engine.say(text)
     engine.runAndWait()
+    engine.close()
 
 
 def main() -> None:
