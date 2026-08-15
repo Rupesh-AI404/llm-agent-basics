@@ -27,6 +27,7 @@ def main() -> None:
         nargs="?",
         help="Text to speak. If omitted, the program will ask for input.",
         use_unicode=True,
+        blank=True,
     )
     parser.add_argument(
         "--rate",
