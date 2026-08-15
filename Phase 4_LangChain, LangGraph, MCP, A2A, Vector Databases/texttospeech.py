@@ -40,10 +40,13 @@ def main() -> None:
     text = args.text if args.text else input("Enter text to speak: ").strip()
     if not text:
         raise SystemExit("No text provided.")
+    else:
+        speak_text(text, rate=args.rate)
 
 
     print(f"Speaking: {text}")
-    speak_text(text, rate=args.rate)
+
+
 
 
 if __name__ == "__main__":
