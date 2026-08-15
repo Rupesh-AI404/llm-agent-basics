@@ -38,6 +38,7 @@ def main() -> None:
         show_default=True,
         envvar="SpeakingRate",
         dest="rate",
+        width=10
     )
     args = parser.parse_args()
 
