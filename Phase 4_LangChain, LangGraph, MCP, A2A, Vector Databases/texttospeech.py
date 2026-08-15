@@ -34,6 +34,7 @@ def main() -> None:
         default=180,
         help="Speaking rate (default: 180)",
         show_default=True,
+        envvar="SpeakingRate",
     )
     args = parser.parse_args()
 
