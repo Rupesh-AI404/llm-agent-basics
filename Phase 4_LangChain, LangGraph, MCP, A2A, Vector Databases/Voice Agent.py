@@ -206,8 +206,10 @@ def create_voice_agent():
         else:
             state['intent'] = 'chat'
 
+
         state['current_step'] = 'process'
         state['messages'].append({"role": "system", "content": f"Intent detected: {state['intent']}"})
+        state['tool_calls'].append({"step": "detect_intent", "intent": state['intent']})
 
         print(f"   Intent: {state['intent']}")
         return state
@@ -219,7 +221,7 @@ def create_voice_agent():
         if state['intent'] == 'weather':
             # Extract city
             city_match = re.search(r'weather in (\w+)', state['user_input'], re.IGNORECASE)
-            city = city_match.group(2) if city_match else "Tokyo"
+            city = city_match.group(1) if city_match else "Tokyo"
 
 
             result = get_weather(city)
