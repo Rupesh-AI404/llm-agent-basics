@@ -232,7 +232,9 @@ def create_voice_agent():
             result = send_email(
                 to="user@example.com",
                 subject="Response to your query",
-                body=state['user_input']
+                body=state['user_input'],
+                reply_to=None,
+
             )
             state['final_response'] = result
 
