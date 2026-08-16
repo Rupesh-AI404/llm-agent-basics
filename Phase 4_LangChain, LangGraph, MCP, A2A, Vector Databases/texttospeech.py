@@ -21,6 +21,7 @@ def speak_text(text: str, rate: int = 180) -> None:
     engine.close()
 
 
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Basic text-to-speech example")
     parser.add_argument(
@@ -49,6 +50,7 @@ def main() -> None:
         raise SystemExit("No text provided.")
     else:
         speak_text(text, rate=args.rate)
+
 
 
     print(f"Speaking: {text}")
