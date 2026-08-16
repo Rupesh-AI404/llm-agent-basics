@@ -210,6 +210,7 @@ def create_voice_agent():
         state['current_step'] = 'process'
         state['messages'].append({"role": "system", "content": f"Intent detected: {state['intent']}"})
         state['tool_calls'].append({"step": "detect_intent", "intent": state['intent']})
+        state['final_response'] = f"Intent detected: {state['intent']}"
 
         print(f"   Intent: {state['intent']}")
         return state
