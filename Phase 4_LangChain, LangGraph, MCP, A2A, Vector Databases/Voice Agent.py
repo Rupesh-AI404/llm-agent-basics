@@ -268,6 +268,7 @@ def create_voice_agent():
             print(word, end=' ', flush=True)
             await asyncio.sleep(0.05)  # Simulate streaming delay
             state['streaming_buffer'] += word + " "
+            state['tool_calls'].append({"step": "stream_response", "word": word})
 
         print("\n" + "-" * 40)
         state['current_step'] = 'complete'
