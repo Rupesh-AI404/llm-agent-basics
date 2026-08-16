@@ -29,6 +29,7 @@ def main() -> None:
         help="Text to speak. If omitted, the program will ask for input.",
         use_unicode=True,
         blank=True,
+        show_default=True,
     )
     parser.add_argument(
         "--rate",
