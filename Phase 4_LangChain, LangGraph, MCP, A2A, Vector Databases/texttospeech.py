@@ -31,6 +31,7 @@ def main() -> None:
         use_unicode=True,
         blank=True,
         show_default=True,
+        required=False,
     )
     parser.add_argument(
         "--rate",
