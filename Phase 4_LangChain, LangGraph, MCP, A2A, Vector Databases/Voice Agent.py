@@ -72,6 +72,7 @@ def send_email(to: str, subject: str, body: str) -> str:
     print(f"   To: {to}")
     print(f"   Subject: {subject}")
     print(f"   Body: {body[:100]}...")
+    print(f" Body: {body[-100:]}...")
     return f"Email sent successfully to {to}"
 
 
