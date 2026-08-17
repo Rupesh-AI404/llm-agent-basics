@@ -248,6 +248,11 @@ def create_voice_agent():
             result = search_web(query)
             state['final_response'] = f"Search results: {result}"
 
+        elif state['intent'] == 'chat':
+            query = state['user_input'].replace('search', '').replace('for', '').strip()
+            result = search_web(query)
+            state['final_response'] = f"Search results: {result}"
+
         else:
             # Chat - use LLM
             response = llm.invoke(state['user_input'])
