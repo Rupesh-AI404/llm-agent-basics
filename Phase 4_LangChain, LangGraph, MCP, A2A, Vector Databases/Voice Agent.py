@@ -39,6 +39,7 @@ class MCPServer:
     def add_tool(self, name: str, description: str, handler):
         self.tools[name] = {"description": description, "handler": handler}
 
+
     async def call_tool(self, name: str, **kwargs):
         if name not in self.tools:
             return f"Error: Tool '{name}' not found"
