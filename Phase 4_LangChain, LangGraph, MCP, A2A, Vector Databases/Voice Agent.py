@@ -85,6 +85,7 @@ def search_web(query: str, max_results: int = 3) -> str:
         f"Result 1 for '{query}': Important information found...",
         f"Result 2 for '{query}': Additional details...",
         f"Result 3 for '{query}': Further reading..."
+        f"Result 4 for '{query}': Further reading..."
     ]
     return "\n".join(results[:max_results])
 
@@ -132,6 +133,7 @@ class BaseAgent:
     async def handle_message(self, content: str, sender: str) -> str:
         """Override in subclass."""
         return f"{self.card.name} received: {content}"
+
 
     async def call_mcp(self, server_name: str, tool_name: str, **kwargs) -> str:
         if server_name not in self.mcp_servers:
