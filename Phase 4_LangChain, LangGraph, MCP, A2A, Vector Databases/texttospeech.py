@@ -51,6 +51,8 @@ def main() -> None:
         raise SystemExit("No text provided.")
     else:
         speak_text(text, rate=args.rate)
+        speak_text(text, rate=args.rate)
+        speak_text(text, rate=args.rate)
 
 
 
