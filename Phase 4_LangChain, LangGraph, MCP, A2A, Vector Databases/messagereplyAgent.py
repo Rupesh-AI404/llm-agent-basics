@@ -46,6 +46,7 @@ class MessageReplyAgent:
             "model": self.model,
             "messages": self._build_messages(message, context, history),
             "temperature": 0.2,
+            "max_tokens": 150,
         }
         request = urllib.request.Request(
             "https://api.openai.com/v1/chat/completions",
