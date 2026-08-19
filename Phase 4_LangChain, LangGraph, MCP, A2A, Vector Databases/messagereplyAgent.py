@@ -54,6 +54,7 @@ class MessageReplyAgent:
             headers={
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",
+                "Accept": "application/json",
             },
             method="POST",
         )
