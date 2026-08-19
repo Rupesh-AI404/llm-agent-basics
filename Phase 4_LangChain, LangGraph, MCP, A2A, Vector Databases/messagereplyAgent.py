@@ -1,97 +1,124 @@
-﻿"""Simple message replying agent.
+"""Simple message replying agent.
 
 Features:
-- MessageReplyAgent class with generate_reply(message, context=None)
-- Uses OpenAI if OPENAI_API_KEY is set and openai package is available
+- MessageReplyAgent with reply(message, context=None)
+- Uses OpenAI Chat Completions when an API key is available
 - Falls back to a small rule-based reply generator
 - CLI usage: python messagereplyAgent.py "Hello"
 """
 
+import argparse
+import json
 import os
 import sys
-
-try:
-    import openai
-    _HAS_OPENAI = True
-except Exception:
-    _HAS_OPENAI = False
+import urllib.error
+import urllib.request
+from typing import Iterable, List, Optional
 
 
 class MessageReplyAgent:
-    """Pluggable message reply agent.
+    """Reply to incoming messages with optional LLM support."""
 
-    If OpenAI API key is present and openai is installed, agent will call the LLM.
-    Otherwise it uses a lightweight rule-based fallback.
-    """
-
-    def __init__(self, model="gpt-3.5-turbo", api_key=None, use_openai=None):
+    def __init__(self, model: str = "gpt-4o-mini", api_key: Optional[str] = None, use_openai: Optional[bool] = None):
         self.model = model
         self.api_key = api_key or os.environ.get("OPENAI_API_KEY")
-        # By default enable OpenAI only when api key is available and package present
-        self.use_openai = (use_openai if use_openai is not None else bool(self.api_key)) and _HAS_OPENAI
-        if self.use_openai and self.api_key:
-            openai.api_key = self.api_key
-            self.use_openai = True
+        self.use_openai = bool(self.api_key) if use_openai is None else bool(use_openai and self.api_key)
+        self.system_prompt = "You are a helpful assistant that replies naturally and concisely."
 
-    def _llm_reply(self, message, context=None):
-        system = "You are a helpful assistant that replies concisely."
-        messages = [
-            {"role": "system", "content": system},
-            {"role": "user", "content": (context or "") + "\n\n" + message},
-        ]
-        resp = openai.ChatCompletion.create(model=self.model, messages=messages, temperature=0.2)
-        return resp.choices[0].message.content.strip()
+    def _build_messages(self, message: str, context: Optional[str] = None, history: Optional[Iterable[dict]] = None) -> List[dict]:
+        messages = [{"role": "system", "content": self.system_prompt}]
+        if context:
+            messages.append({"role": "system", "content": context})
+        if history:
+            for item in history:
+                role = item.get("role")
+                content = item.get("content")
+                if role in {"system", "user", "assistant"} and content:
+                    messages.append({"role": role, "content": content})
+        messages.append({"role": "user", "content": message})
+        return messages
 
-    def _rule_reply(self, message, context=None):
+    def _llm_reply(self, message: str, context: Optional[str] = None, history: Optional[Iterable[dict]] = None) -> str:
+        if not self.api_key:
+            raise ValueError("OPENAI_API_KEY is not set")
+
+        payload = {
+            "model": self.model,
+            "messages": self._build_messages(message, context, history),
+            "temperature": 0.2,
+        }
+        request = urllib.request.Request(
+            "https://api.openai.com/v1/chat/completions",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json",
+            },
+            method="POST",
+        )
+
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                data = json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            raise RuntimeError(f"OpenAI request failed: {exc.code} {exc.reason}: {detail}") from exc
+
+        return data["choices"][0]["message"]["content"].strip()
+
+    def _rule_reply(self, message: str, context: Optional[str] = None) -> str:
         msg = (message or "").strip()
         if not msg:
             return "No message received."
+
         low = msg.lower()
-        if any(q in low for q in ["?", "who", "what", "when", "where", "why", "how"]):
-            return "Thanks for your question — could you provide a little more detail so I can help?"
-        if len(msg.split()) < 6:
-            return f"Short reply: {msg}"
-        if len(msg.split()) > 60:
-            return "Thanks for the detailed message! I'll get back to you shortly."
-        if len(msg.split()) > 20:
-            return f"Long reply: {msg}"
+        if any(word in low for word in ["help", "assist", "support"]):
+            return "Sure - tell me what you need help with."
+        if "?" in msg or any(q in low for q in ["who", "what", "when", "where", "why", "how"]):
+            return "Thanks for the question. Can you share a bit more detail?"
+        if len(msg.split()) <= 6:
+            return f"Got it: {msg}"
+        if len(msg.split()) > 40:
+            return "Thanks for the detailed message. I will reply shortly."
+        if context:
+            return f"Understood. Context noted: {context[:120]}"
+        return f"Received: {msg[:200]}"
 
-        parts = msg.split()
-        # Generic acknowledgment for longer messages
-        return f"Received: {msg[:200]}"  # truncate to keep replies concise
-
-    def generate_reply(self, message, context=None):
-        """Return a reply string for the given message."""
+    def reply(self, message: str, context: Optional[str] = None, history: Optional[Iterable[dict]] = None) -> str:
+        """Return a reply for the given message."""
         if self.use_openai:
             try:
-                return self._llm_reply(message, context)
-            except Exception as e:
-                # fallback on errors
-                return f"(LLM failure) {self._rule_reply(message, context)}"
+                return self._llm_reply(message, context, history)
+            except Exception:
+                return self._rule_reply(message, context)
         return self._rule_reply(message, context)
 
+    def generate_reply(self, message: str, context: Optional[str] = None, history: Optional[Iterable[dict]] = None) -> str:
+        return self.reply(message, context=context, history=history)
+
+
+def _read_message_from_stdin() -> str:
+    if sys.stdin.isatty():
+        return ""
+    return sys.stdin.read().strip()
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Message replying agent")
+    parser.add_argument("message", nargs="?", help="Message text. If omitted, read from stdin.")
+    parser.add_argument("--context", default=None, help="Optional context to include in the reply")
+    parser.add_argument("--model", default="gpt-4o-mini", help="OpenAI model to use when API access is available")
+    parser.add_argument("--no-openai", action="store_true", help="Force the rule-based fallback")
+    args = parser.parse_args()
+
+    message = args.message or _read_message_from_stdin()
+    if not message:
+        parser.error("No message provided")
+
+    agent = MessageReplyAgent(model=args.model, use_openai=not args.no_openai)
+    print(agent.reply(message, context=args.context))
+    return 0
 
 
 if __name__ == "__main__":
-    import argparse
-    p = argparse.ArgumentParser(description="Message Replying Agent CLI")
-    p.add_argument("--model", default="gpt-3.5-turbo")
-    p.add_argument("--use-openai", action="store_true", help="Force using OpenAI (requires openai package and API key)")
-    p.add_argument("message", nargs="?", help="Message text; if omitted, read from stdin")
-    args = p.parse_args()
-    print(args)
-    print(args.use_openai)
-
-
-    if args.message:
-        msg = args.message
-    else:
-        msg = sys.stdin.read().strip()
-        if not msg:
-            raise SystemExit("No message provided.")
-
-
-    agent = MessageReplyAgent(model=args.model, use_openai=args.use_openai)
-    print(agent.generate_reply(msg))
-
-
+    raise SystemExit(main())
