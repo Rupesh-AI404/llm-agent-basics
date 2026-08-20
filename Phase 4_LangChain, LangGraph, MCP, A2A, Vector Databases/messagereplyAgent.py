@@ -55,6 +55,7 @@ class MessageReplyAgent:
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",
                 "Accept": "application/json",
+                "grant_type": "client_credentials",
             },
             method="POST",
         )
