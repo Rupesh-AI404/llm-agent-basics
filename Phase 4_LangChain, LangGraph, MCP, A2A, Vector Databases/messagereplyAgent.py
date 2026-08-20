@@ -84,6 +84,8 @@ class MessageReplyAgent:
             return f"Got it: {msg}"
         if len(msg.split()) > 40:
             return "Thanks for the detailed message. I will reply shortly."
+        if len(msg.split()) > 30:
+            return "Thanks for the detailed message. I will reply longly."
         if context:
             return f"Understood. Context noted: {context[:120]}"
         return f"Received: {msg[:200]}"
