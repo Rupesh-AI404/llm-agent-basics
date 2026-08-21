@@ -57,6 +57,7 @@ class MessageReplyAgent:
                 "Content-Type": "application/json",
                 "Accept": "application/json",
                 "grant_type": "client_credentials",
+                "cache-control": "no-cache",
             },
             method="POST",
         )
