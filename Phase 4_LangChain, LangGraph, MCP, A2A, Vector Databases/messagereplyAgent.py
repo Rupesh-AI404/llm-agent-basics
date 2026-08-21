@@ -88,6 +88,8 @@ class MessageReplyAgent:
             return "Thanks for the detailed message. I will reply longly."
         if context:
             return f"Understood. Context noted: {context[:120]}"
+        if len(msg.split()) > 20:
+            return "Thanks for the detailed message. I will reply longly."
         return f"Received: {msg[:200]}"
 
     def reply(self, message: str, context: Optional[str] = None, history: Optional[Iterable[dict]] = None) -> str:
@@ -116,7 +118,6 @@ def main() -> int:
     parser.add_argument("--model", default="gpt-4o-mini", help="OpenAI model to use when API access is available")
     parser.add_argument("--no-openai", action="store_true", help="Force the rule-based fallback")
     parser.add_argument("-v", "--version", action="version", version="%(prog)s 1.0")
-
     args = parser.parse_args()
 
     message = args.message or _read_message_from_stdin()
