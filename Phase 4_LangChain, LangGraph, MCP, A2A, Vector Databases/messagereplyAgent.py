@@ -116,6 +116,7 @@ def main() -> int:
     parser.add_argument("--model", default="gpt-4o-mini", help="OpenAI model to use when API access is available")
     parser.add_argument("--no-openai", action="store_true", help="Force the rule-based fallback")
     parser.add_argument("-v", "--version", action="version", version="%(prog)s 1.0")
+
     args = parser.parse_args()
 
     message = args.message or _read_message_from_stdin()
