@@ -128,7 +128,9 @@ def main() -> int:
 
     agent = MessageReplyAgent(model=args.model, use_openai=not args.no_openai)
     print(agent.reply(message, context=args.context))
+    print(agent.generate_reply(message, context=args.context))
     return 0
+
 
 
 if __name__ == "__main__":
