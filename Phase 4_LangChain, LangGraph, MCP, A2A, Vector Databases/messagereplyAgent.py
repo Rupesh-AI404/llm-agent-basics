@@ -24,6 +24,7 @@ class MessageReplyAgent:
         self.api_key = api_key or os.environ.get("OPENAI_API_KEY")
         self.use_openai = bool(self.api_key) if use_openai is None else bool(use_openai and self.api_key)
         self.system_prompt = "You are a helpful assistant that replies naturally and concisely."
+        self.rule_prompt = "You are a simple rule-based assistant that replies based on keywords and message length."
 
     def _build_messages(self, message: str, context: Optional[str] = None, history: Optional[Iterable[dict]] = None) -> List[dict]:
         messages = [{"role": "system", "content": self.system_prompt}]
