@@ -114,6 +114,7 @@ class AutonomousAgent:
         print(f"Completed: {sum(1 for t in self.tasks.values() if t['status'] == TaskStatus.COMPLETED)}")
         print(f"Pending: {sum(1 for t in self.tasks.values() if t['status'] == TaskStatus.PENDING)}")
         print(f"Failed: {sum(1 for t in self.tasks.values() if t['status'] == TaskStatus.FAILED)}")
+        print(f"{'='*60}\n")
     
     def get_memory_log(self) -> str:
         """Return agent's memory log"""
