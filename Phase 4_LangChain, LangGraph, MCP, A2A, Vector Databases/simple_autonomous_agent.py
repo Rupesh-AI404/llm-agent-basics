@@ -135,6 +135,7 @@ if __name__ == "__main__":
     agent.add_task("Analysis", "Analyze processed data", priority=1)
     agent.add_task("Report Generation", "Generate final report", priority=4)
     agent.add_task("Notification", "Send notifications", priority=2)
+    agent.add_task("Report Generation", "Generate final report", priority=3)
     
     # Run autonomously
     agent.run_autonomously()
