@@ -130,6 +130,11 @@ class AutonomousAgent:
         self.is_running = True
         print(f"\n[{self.agent_name}] Started.")
 
+    def end(self):
+        """Stop the agent"""
+        self.is_running = False
+        print(f"\n[{self.agent_name}] Stopped.")
+
 # Example usage
 if __name__ == "__main__":
     # Create an autonomous agent
