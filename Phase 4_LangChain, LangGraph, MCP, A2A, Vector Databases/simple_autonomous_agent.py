@@ -139,6 +139,8 @@ class AutonomousAgent:
 if __name__ == "__main__":
     # Create an autonomous agent
     agent = AutonomousAgent("TaskBot")
+    agent.start()
+
     
     # Add tasks
     agent.add_task("Data Collection", "Gather data from sources", priority=3)
