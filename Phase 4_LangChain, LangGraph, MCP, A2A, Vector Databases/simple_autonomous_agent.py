@@ -39,7 +39,8 @@ class AutonomousAgent:
             "status": TaskStatus.PENDING,
             "priority": priority,
             "created_at": datetime.now(),
-            "completed_at": None
+            "completed_at": None,
+            "result": None,
         }
         
         log_msg = f"[{self.agent_name}] Added task: {task_name} (Priority: {priority})"
