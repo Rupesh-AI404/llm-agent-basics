@@ -139,7 +139,6 @@ class AutonomousAgent:
 if __name__ == "__main__":
     # Create an autonomous agent
     agent = AutonomousAgent("TaskBot")
-    agent.start()
 
     
     # Add tasks
@@ -149,6 +148,7 @@ if __name__ == "__main__":
     agent.add_task("Report Generation", "Generate final report", priority=4)
     agent.add_task("Notification", "Send notifications", priority=2)
     agent.add_task("Report Generation", "Generate final report", priority=3)
+    agent.add_task("Report Generation", "Generate final report", priority=4)
     
     # Run autonomously
     agent.run_autonomously()
