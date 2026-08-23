@@ -80,6 +80,7 @@ class AutonomousAgent:
         # Mark as completed
         task["status"] = TaskStatus.COMPLETED
         task["completed_at"] = datetime.now()
+        task["result"] = f"Result of {task['name']} completed successfully."
         
         log_msg = f"[{self.agent_name}] Completed: {task['name']}"
         self.memory.append(log_msg)
@@ -157,3 +158,4 @@ if __name__ == "__main__":
     print("\n[MEMORY] Agent Memory Log:")
     print("-" * 60)
     print(agent.get_memory_log())
+
