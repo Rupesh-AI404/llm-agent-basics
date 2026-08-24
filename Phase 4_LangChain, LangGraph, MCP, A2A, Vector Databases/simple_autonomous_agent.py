@@ -95,6 +95,7 @@ class AutonomousAgent:
         task["status"] = TaskStatus.COMPLETED
         task["completed_at"] = datetime.now()
         task["result"] = f"Result of {task['name']} completed successfully."
+        task["created_at"] = datetime.now()
         
         log_msg = f"[{self.agent_name}] Completed: {task['name']}"
         self.memory.append(log_msg)
