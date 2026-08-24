@@ -26,6 +26,7 @@ class AutonomousAgent:
         self.task_counter = 0
         self.memory: List[str] = []
         self.is_running = False
+        self.start_time = datetime.now()
         
     def add_task(self, task_name: str, task_description: str, priority: int = 1) -> int:
         """Add a new task to the agent's queue"""
