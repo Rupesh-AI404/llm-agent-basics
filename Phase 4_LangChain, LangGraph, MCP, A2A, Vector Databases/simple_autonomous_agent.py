@@ -89,7 +89,7 @@ class AutonomousAgent:
         print(log_msg)
         
         # Simulate work
-        time.sleep(0.5)
+        time.sleep(1)
         
         # Mark as completed
         task["status"] = TaskStatus.COMPLETED
