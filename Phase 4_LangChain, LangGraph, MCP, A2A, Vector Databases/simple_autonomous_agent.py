@@ -32,7 +32,6 @@ class AutonomousAgent:
         """Add a new task to the agent's queue"""
         task_id = self.task_counter
         self.task_counter += 1
-        
         self.tasks[task_id] = {
             "id": task_id,
             "name": task_name,
@@ -48,6 +47,19 @@ class AutonomousAgent:
         self.memory.append(log_msg)
         print(log_msg)
         return task_id
+
+    def get_next_task(self) -> Dict:
+        """Get the highest priority pending task"""
+        pending_tasks = [
+            task for task in self.tasks.values()
+            if task["status"] == TaskStatus.PENDING
+        ]
+        
+        if not pending_tasks:
+            return None
+
+        # Sort by priority (higher = more important)
+        return max(pending_tasks, key=lambda x: x["priority"])
     
     def get_next_task(self) -> Dict:
         """Get the highest priority pending task"""
