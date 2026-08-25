@@ -101,10 +101,10 @@ class PDFSummaryAgent:
         if not meaningful:
             return "No summary could be generated from the PDF text."
 
-        key_sentences = meaningful[:6]
+        key_sentences = meaningful[: min(3, len(meaningful))]
         summary = " ".join(key_sentences)
-        if len(summary) > 700:
-            summary = summary[:700].rsplit(" ", 1)[0] + "..."
+        if len(summary) > 500:
+            summary = summary[:500].rsplit(" ", 1)[0] + "..."
         return summary
 
     def summarize_pdf(self, pdf_path: str, max_pages: Optional[int] = None) -> str:
