@@ -78,6 +78,7 @@ class PDFSummaryAgent:
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",
                 "Accept": "application/json",
+                "Accept-Language": "en-US",
             },
             method="POST",
         )
