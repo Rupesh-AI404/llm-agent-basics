@@ -141,6 +141,7 @@ def main() -> int:
 
     agent = PDFSummaryAgent(model=args.model, use_openai=not args.no_openai)
     summary = agent.summarize_pdf(args.pdf_path, max_pages=args.max_pages)
+    print(f"Summary for {args.pdf_path}:")
 
     if args.output:
         with open(args.output, "w", encoding="utf-8") as out_file:
