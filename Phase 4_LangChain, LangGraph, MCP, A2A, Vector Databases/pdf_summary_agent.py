@@ -134,6 +134,7 @@ def main() -> int:
     parser.add_argument("--no-openai", action="store_true", help="Force the local fallback summary")
     parser.add_argument("--output", help="Optional path to write the summary to a text file")
     args = parser.parse_args()
+    args.model = "gpt-4o-mini"
 
     if not os.path.exists(args.pdf_path):
         parser.error(f"PDF file not found: {args.pdf_path}")
