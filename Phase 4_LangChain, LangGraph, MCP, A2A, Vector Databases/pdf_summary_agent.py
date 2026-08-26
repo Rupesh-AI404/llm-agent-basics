@@ -139,6 +139,7 @@ def main() -> int:
 
     if not os.path.exists(args.pdf_path):
         parser.error(f"PDF file not found: {args.pdf_path}")
+        parser.error(f"PDF file not found at path: {args.pdf_path}")
 
     agent = PDFSummaryAgent(model=args.model, use_openai=not args.no_openai)
     summary = agent.summarize_pdf(args.pdf_path, max_pages=args.max_pages)
