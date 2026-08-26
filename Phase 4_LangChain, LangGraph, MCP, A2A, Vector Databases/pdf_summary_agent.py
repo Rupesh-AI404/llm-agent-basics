@@ -147,6 +147,7 @@ def main() -> int:
         with open(args.output, "w", encoding="utf-8") as out_file:
             out_file.write(summary)
         print(f"Summary saved to: {args.output}")
+        print(f"Summary for {args.pdf_path}:")
 
     print(summary)
     return 0
