@@ -47,6 +47,7 @@ class PDFSummaryAgent:
         pages = []
         total_pages = len(reader.pages)
         limit = total_pages if max_pages is None else min(max_pages, total_pages)
+        print(f"Processing {limit} out of {total_pages} pages.")
 
         for page_number in range(limit):
             page = reader.pages[page_number]
