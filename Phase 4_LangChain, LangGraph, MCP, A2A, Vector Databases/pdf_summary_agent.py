@@ -82,6 +82,7 @@ class PDFSummaryAgent:
                 "Content-Type": "application/json",
                 "Accept": "application/json",
                 "Accept-Language": "en-US",
+                "model": self.model,
             },
             method="POST",
         )
