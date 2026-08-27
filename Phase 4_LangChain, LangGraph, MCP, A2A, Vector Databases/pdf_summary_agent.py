@@ -92,6 +92,7 @@ class PDFSummaryAgent:
         try:
             with urllib.request.urlopen(request, timeout=30) as response:
                 data = json.loads(response.read().decode("utf-8"))
+                data["choices"][0]["message"]["content"] = self._clean_text(data["choices"][0]["message"]["content"])
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="replace")
             raise RuntimeError(f"OpenAI request failed: {exc.code} {exc.reason}: {detail}") from exc
