@@ -137,9 +137,11 @@ def main() -> int:
     parser.add_argument("--max-pages", type=int, default=None, help="Optional limit on how many pages to read")
     parser.add_argument("--no-openai", action="store_true", help="Force the local fallback summary")
     parser.add_argument("--output", help="Optional path to write the summary to a text file")
+    parser.add_argument("--echo", action="store_true", help="Print the summary to the console")
     args = parser.parse_args()
     args.model = "gpt-4o-mini"
-    args.use_openai = True
+    args.use_openai = True,
+    args.echo = False,
 
     if not os.path.exists(args.pdf_path):
         parser.error(f"PDF file not found: {args.pdf_path}")
