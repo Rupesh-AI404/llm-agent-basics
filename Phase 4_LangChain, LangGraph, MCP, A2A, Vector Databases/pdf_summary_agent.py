@@ -157,7 +157,9 @@ def main() -> int:
         print(f"Summary saved to: {args.output}")
         print(f"Summary for {args.pdf_path}:")
 
-    print(summary)
+    if args.echo:
+        print(summary)
+
     return 0
 
 
