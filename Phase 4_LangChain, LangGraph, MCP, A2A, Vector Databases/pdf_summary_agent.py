@@ -74,6 +74,7 @@ class PDFSummaryAgent:
             "frequency_penalty": 0,
             "presence_penalty": 0,
             "echo": False,
+            "expand": False,
         }
 
         request = urllib.request.Request(
