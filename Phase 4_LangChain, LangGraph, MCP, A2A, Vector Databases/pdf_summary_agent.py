@@ -67,6 +67,7 @@ class PDFSummaryAgent:
             "messages": [
                 {"role": "system", "content": self.system_prompt},
                 {"role": "user", "content": f"Summarize this PDF content:\n\n{text[:15000]}"},
+                {"role": "user", "content": self.system_prompt},
             ],
             "temperature": 0.2,
             "max_tokens": 500,
