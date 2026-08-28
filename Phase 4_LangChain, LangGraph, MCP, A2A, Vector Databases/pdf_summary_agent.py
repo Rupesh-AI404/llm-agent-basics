@@ -156,6 +156,7 @@ def main() -> int:
             out_file.write(summary)
         print(f"Summary saved to: {args.output}")
         print(f"Summary for {args.pdf_path}:")
+        print(f"Summary for {args.pdf_path}:")
 
     if args.echo:
         print(summary)
