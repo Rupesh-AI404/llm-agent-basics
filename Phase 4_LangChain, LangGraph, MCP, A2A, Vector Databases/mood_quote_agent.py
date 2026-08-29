@@ -19,6 +19,7 @@ class MoodQuoteAgent:
             "Happiness is not by chance, but by choice. — William George Jordan",
             "Keep your face always toward the sunshine—and shadows will fall behind you. — Walt Whitman",
             "The best way to cheer yourself is to try to cheer someone else up. — Mark Twain",
+            "Happiness is the medicine of the life"
         ],
         "sad": [
             "The darkest nights produce the brightest stars. — John Green",
