@@ -85,6 +85,7 @@ class MoodQuoteAgent:
         "mad": "angry",
         "irritated": "angry",
         "romantic": "romantic",
+        "lovestruck": "romantic",
         "love": "romantic",
         "in-love": "romantic",
         "stressed": "stressed",
