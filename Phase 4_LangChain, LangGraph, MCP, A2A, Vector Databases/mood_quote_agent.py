@@ -106,6 +106,7 @@ class MoodQuoteAgent:
 
         cleaned = re.sub(r"[^a-z\s-]", " ", str(mood).lower())
         cleaned = re.sub(r"\s+", " ", cleaned).strip()
+        cleaned = re.sub(r"\s+", " ", cleaned)
 
         if cleaned in MoodQuoteAgent.SYNONYM_MAP:
             return MoodQuoteAgent.SYNONYM_MAP[cleaned]
@@ -143,6 +144,7 @@ def generate_quote_for_mood(mood: str) -> str:
 def build_quote(mood: str) -> str:
     """Alias for a simple, readable API."""
     return generate_quote(mood)
+
 
 
 if __name__ == "__main__":
