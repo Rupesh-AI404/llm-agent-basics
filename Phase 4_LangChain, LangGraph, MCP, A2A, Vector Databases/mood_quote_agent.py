@@ -68,6 +68,7 @@ class MoodQuoteAgent:
         "joyful": "happy",
         "excited": "happy",
         "cheerful": "happy",
+        "vibrant": "happy",
         "sad": "sad",
         "upset": "sad",
         "depressed": "sad",
