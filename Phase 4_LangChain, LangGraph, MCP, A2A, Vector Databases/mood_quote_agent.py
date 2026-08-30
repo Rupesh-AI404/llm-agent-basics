@@ -96,6 +96,7 @@ class MoodQuoteAgent:
         "lost": "confused",
         "unsure": "confused",
         "neutral": "neutral",
+        "indifferent": "neutral",
     }
 
     @staticmethod
