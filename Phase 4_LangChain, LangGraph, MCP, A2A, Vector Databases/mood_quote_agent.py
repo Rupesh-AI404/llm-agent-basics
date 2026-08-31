@@ -57,6 +57,7 @@ class MoodQuoteAgent:
             "Not all those who wander are lost. — J.R.R. Tolkien",
             "Sometimes the question is the answer. — Unknown",
             "Clarity is the first step to confidence. — Unknown",
+            "Visit some peaceful places to clear your mind.",
         ],
         "neutral": [
             "The future depends on what you do today. — Mahatma Gandhi",
