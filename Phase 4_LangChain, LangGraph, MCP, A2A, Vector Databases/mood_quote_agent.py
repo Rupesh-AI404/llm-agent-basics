@@ -32,6 +32,7 @@ class MoodQuoteAgent:
             "Success is the sum of small efforts, repeated day in and day out. — Robert Collier",
             "Don’t watch the clock; do what it does. Keep going. — Sam Levenson",
             "Start where you are. Use what you have. Do what you can. — Arthur Ashe",
+            "Watch your thoughts; they become words. Watch your words; they become actions. Watch your actions; they become habits. Watch your habits; they become character. Watch your character; it becomes your destiny. — Lao Tzu",
         ],
         "calm": [
             "Peace begins with a smile. — Mother Teresa",
