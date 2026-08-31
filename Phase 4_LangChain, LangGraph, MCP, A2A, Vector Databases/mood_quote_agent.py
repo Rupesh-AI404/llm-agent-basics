@@ -25,6 +25,7 @@ class MoodQuoteAgent:
             "The darkest nights produce the brightest stars. — John Green",
             "Tough times don't last, tough people do. — Robert H. Schuller",
             "Even the saddest hearts can still learn to bloom. — Unknown",
+            "Every day may not be good, but there is something good in every day. — Unknown",
         ],
         "motivated": [
             "Success is the sum of small efforts, repeated day in and day out. — Robert Collier",
