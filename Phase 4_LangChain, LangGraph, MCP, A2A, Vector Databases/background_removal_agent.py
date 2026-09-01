@@ -88,6 +88,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("input", help="Path to an image file or a directory of images")
     parser.add_argument("-o", "--output", help="Output PNG path for a single image")
     parser.add_argument("--output-dir", help="Directory for batch output or the default single-image output")
+    parser.add_argument("-i", "--input", help="Path to an image file or a directory of images")
     return parser
 
 
