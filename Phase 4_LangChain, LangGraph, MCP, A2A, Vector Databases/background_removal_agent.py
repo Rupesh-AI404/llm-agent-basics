@@ -71,6 +71,7 @@ class BackgroundRemovalAgent:
 
         target_dir = Path(output_dir).expanduser().resolve() if output_dir else source_dir
         target_dir.mkdir(parents=True, exist_ok=True)
+        target_dir = target_dir.resolve()
 
         results: list[Path] = []
         for image_path in sorted(source_dir.iterdir()):
