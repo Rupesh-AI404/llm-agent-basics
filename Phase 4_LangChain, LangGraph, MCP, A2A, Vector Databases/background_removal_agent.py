@@ -96,8 +96,10 @@ def main() -> int:
     parser = build_parser()
     args = parser.parse_args()
 
+
     agent = BackgroundRemovalAgent(output_dir=args.output_dir)
     source = Path(args.input)
+
 
     if source.is_dir():
         results = agent.remove_background_batch(args.input, output_dir=args.output_dir)
