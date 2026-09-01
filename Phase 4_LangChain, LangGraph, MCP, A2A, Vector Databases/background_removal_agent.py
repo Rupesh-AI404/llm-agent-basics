@@ -33,6 +33,8 @@ class BackgroundRemovalAgent:
             resolved = Path(output_path).expanduser().resolve()
             if resolved.suffix.lower() != ".png":
                 resolved = resolved.with_suffix(".png")
+            else:
+               resolved = resolved.with_suffix(".jpg")
             return resolved
 
         target_dir = self.output_dir or input_path.parent
