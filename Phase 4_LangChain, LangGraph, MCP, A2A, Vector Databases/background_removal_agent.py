@@ -55,6 +55,7 @@ class BackgroundRemovalAgent:
 
         target = self._resolve_output_path(source, output_path)
         target.parent.mkdir(parents=True, exist_ok=True)
+        target_bytes = io.BytesIO()
 
         image_bytes = source.read_bytes()
         result_bytes = remove(image_bytes)
