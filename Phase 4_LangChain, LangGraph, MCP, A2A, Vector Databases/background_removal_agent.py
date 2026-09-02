@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import io
+import os
 from pathlib import Path
 from typing import Optional
 
@@ -20,6 +21,8 @@ try:
     from rembg import remove
 except ImportError as exc:  # pragma: no cover - dependency setup help
     raise SystemExit("Missing dependency: install rembg with `py -3 -m pip install rembg`") from exc
+
+
 
 
 class BackgroundRemovalAgent:
