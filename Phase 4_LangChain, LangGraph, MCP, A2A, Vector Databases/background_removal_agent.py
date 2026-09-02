@@ -105,6 +105,10 @@ def main() -> int:
 
     agent = BackgroundRemovalAgent(output_dir=args.output_dir)
     source = Path(args.input)
+    if not source.exists():
+        raise FileNotFoundError(f"Image not found: {source}")
+    if not source.is_file():
+        raise ValueError(f"Input path is not a file: {source}")
 
 
     if source.is_dir():
