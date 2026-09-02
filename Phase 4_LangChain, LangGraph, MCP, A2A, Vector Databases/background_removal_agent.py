@@ -49,6 +49,7 @@ class BackgroundRemovalAgent:
         if not source.is_file():
             raise ValueError(f"Input path is not a file: {source}")
 
+
         target = self._resolve_output_path(source, output_path)
         target.parent.mkdir(parents=True, exist_ok=True)
 
