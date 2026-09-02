@@ -62,6 +62,7 @@ class BackgroundRemovalAgent:
             result_image = result_image.convert("RGBA")
             result_image.save(target, format="PNG")
             result_image.close()
+            result_bytes.close()
 
         return target
 
