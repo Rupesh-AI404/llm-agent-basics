@@ -64,6 +64,8 @@ class BackgroundRemovalAgent:
             result_image.close()
             result_bytes.close()
 
+            print(f"Saved background to {target}")
+
         return target
 
     def remove_background_batch(self, input_dir: str, output_dir: Optional[str] = None) -> list[Path]:
