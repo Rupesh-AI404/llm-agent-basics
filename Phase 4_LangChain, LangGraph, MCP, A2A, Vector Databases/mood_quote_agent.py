@@ -105,6 +105,7 @@ class MoodQuoteAgent:
         "neutral": "neutral",
         "indifferent": "neutral",
         "meh": "neutral",
+        "known": "neutral",
     }
 
     @staticmethod
