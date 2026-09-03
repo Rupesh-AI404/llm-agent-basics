@@ -117,6 +117,7 @@ class MoodQuoteAgent:
         cleaned = re.sub(r"[^a-z\s-]", " ", str(mood).lower())
         cleaned = re.sub(r"\s+", " ", cleaned).strip()
         cleaned = re.sub(r"\s+", " ", cleaned)
+        cleaned = re.sub(r"\s+", " ", cleaned)
 
         if cleaned in MoodQuoteAgent.SYNONYM_MAP:
             return MoodQuoteAgent.SYNONYM_MAP[cleaned]
