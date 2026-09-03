@@ -21,6 +21,7 @@ class MoodQuoteAgent:
             "The best way to cheer yourself is to try to cheer someone else up. — Mark Twain",
             "Every day may not be good, but there is something good in every day. — Unknown",
             "Happiness is the medicine of the life"
+            "Happiness is the key to the success"
         ],
         "sad": [
             "The darkest nights produce the brightest stars. — John Green",
