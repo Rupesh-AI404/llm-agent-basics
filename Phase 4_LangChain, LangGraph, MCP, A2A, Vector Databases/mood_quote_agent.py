@@ -139,6 +139,7 @@ class MoodQuoteAgent:
         index = sum(ord(ch) for ch in normalized) % len(quotes)
         return quotes[index]
 
+
     def get_quote_payload(self, mood: str) -> Dict[str, str]:
         """Return a structured payload with mood and quote."""
         normalized = self.normalize_mood(mood)
