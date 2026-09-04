@@ -106,6 +106,8 @@ class MoodQuoteAgent:
         "neutral": "neutral",
         "indifferent": "neutral",
         "meh": "neutral",
+        "ok": "neutral",
+        "fine": "neutral",
         "known": "neutral",
     }
 
