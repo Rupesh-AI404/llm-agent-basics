@@ -80,9 +80,10 @@ class BackgroundRemovalAgent:
         target_dir.mkdir(parents=True, exist_ok=True)
         target_dir = target_dir.resolve()
 
+
         results: list[Path] = []
         for image_path in sorted(source_dir.iterdir()):
-            if image_path.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".bmp"}:
+            if image_path.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tiff"}:
                 continue
             saved_path = self.remove_background(str(image_path), str(target_dir / f"{image_path.stem}_no_bg.png"))
             results.append(saved_path)
