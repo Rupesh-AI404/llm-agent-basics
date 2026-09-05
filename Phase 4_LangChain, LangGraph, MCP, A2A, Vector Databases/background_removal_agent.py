@@ -26,7 +26,9 @@ class BackgroundRemovalAgent:
     """Remove image backgrounds and persist the transparent result."""
 
     def __init__(self, output_dir: Optional[str] = None):
-        self.output_dir = Path(output_dir).expanduser().resolve() if output_dir else None
+        self.output_dir = Path(output_dir).expanduser().resolve() if output_dir \
+            else None
+
 
     def _resolve_output_path(self, input_path: Path, output_path: Optional[str]) -> Path:
         if output_path:
