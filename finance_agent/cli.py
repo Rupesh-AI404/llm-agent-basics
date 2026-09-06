@@ -49,7 +49,8 @@ def add_transaction(t_type: str, amount: float, category: str, dt: str, note: st
         "amount": round(float(amount), 2),
         "category": category or "uncategorized",
         "date": parsed.isoformat(),
-        "note": note or ""
+        "note": note or "",
+        "budgets": {},
     }
     data.setdefault("transactions", []).append(txn)
     save_data(data)
