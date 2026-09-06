@@ -82,6 +82,7 @@ def summary(year: int, month: int) -> None:
     total_expense = 0.0
     by_category = {}
 
+
     for t in txns:
         try:
             tdate = datetime.fromisoformat(t["date"]) if t.get("date") else None
@@ -115,6 +116,7 @@ def summary(year: int, month: int) -> None:
     else:
         remaining = monthly_budget - total_expense
         print(f"\nBudget ({monthly_budget:.2f}) remaining: {remaining:.2f}")
+
 
 
 def export_csv(path: str) -> None:
