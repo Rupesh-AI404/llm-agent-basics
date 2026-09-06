@@ -157,6 +157,7 @@ def parse_args():
 
     exp = sub.add_parser("export", help="Export all transactions to CSV")
     exp.add_argument("path", help="Output CSV path")
+    exp.add_argument("-c", "--category", default="uncategorized")
 
     return p.parse_args()
 
