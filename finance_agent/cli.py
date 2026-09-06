@@ -71,6 +71,8 @@ def show_budget() -> None:
         print("No monthly budget set. Use 'set-budget' to set one.")
     else:
         print(f"Monthly budget: {b}")
+        save_data(data)
+        print(f"Set monthly budget to: {b}")
 
 
 def summary(year: int, month: int) -> None:
