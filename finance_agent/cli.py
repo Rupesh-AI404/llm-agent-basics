@@ -36,6 +36,7 @@ def load_data() -> Dict[str, Any]:
 
 def save_data(data: Dict[str, Any]) -> None:
     DATA_PATH.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    print(f"Wrote to {DATA_PATH}")
 
 
 def add_transaction(t_type: str, amount: float, category: str, dt: str, note: str) -> None:
