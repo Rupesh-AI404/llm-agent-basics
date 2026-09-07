@@ -145,6 +145,7 @@ def parse_args():
     add.add_argument("-d", "--date", default="", help="ISO date (YYYY-MM-DD) or empty for now")
     add.add_argument("-n", "--note", default="")
     add.add_argument("-y", "--year", type=int, default=date.today().year)
+    add.add_argument("-m", "--month", type=int, default=date.today().month)
 
     sub.add_parser("show-budget", help="Show monthly budget")
     sb = sub.add_parser("set-budget", help="Set monthly budget")
@@ -159,6 +160,7 @@ def parse_args():
     exp = sub.add_parser("export", help="Export all transactions to CSV")
     exp.add_argument("path", help="Output CSV path")
     exp.add_argument("-c", "--category", default="uncategorized")
+    exp.add_argument("-y", "--year", type=int, default=date.today().year)
 
     return p.parse_args()
 
