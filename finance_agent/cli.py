@@ -177,6 +177,8 @@ def main():
         summary(args.year, args.month)
     elif args.cmd == "export":
         export_csv(args.path)
+    elif args.cmd == "expense":
+        add_transaction("expense", args.amount, args.category, args.date, args.note)
     else:
         print("No command provided. Use --help for usage.")
 
