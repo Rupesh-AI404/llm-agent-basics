@@ -86,6 +86,7 @@ def summary(year: int, month: int) -> None:
     by_category = {}
 
 
+
     for t in txns:
         try:
             tdate = datetime.fromisoformat(t["date"]) if t.get("date") else None
