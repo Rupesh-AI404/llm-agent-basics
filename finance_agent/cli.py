@@ -21,7 +21,7 @@ DATA_PATH = Path.home() / ".finance_agent_data.json"
 DEFAULT_DATA: Dict[str, Any] = {
     "transactions": [],  # list of {id, type, amount, category, date, note}
     "budgets": {},       # e.g. {"monthly": 2000}
-    "settings": {}       # e.g. {"currency": "USD"}
+    "settings": {},     # e.g. {"currency": "USD"}
 }
 
 
@@ -53,6 +53,7 @@ def add_transaction(t_type: str, amount: float, category: str, dt: str, note: st
         "date": parsed.isoformat(),
         "note": note or "",
         "budgets": {},
+        "settings": {},
     }
     data.setdefault("transactions", []).append(txn)
     save_data(data)
