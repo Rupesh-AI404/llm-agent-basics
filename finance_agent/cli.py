@@ -155,6 +155,7 @@ def parse_args():
     sb = sub.add_parser("set-budget", help="Set monthly budget")
     sb.add_argument("amount", type=float, help="Monthly budget amount")
     sb.add_argument("-c", "--category", default="uncategorized")
+    sb.add_argument("-y", "--year", type=int, default=date.today().year)
 
     summ = sub.add_parser("summary", help="Show monthly summary")
     summ.add_argument("--year", type=int, default=date.today().year)
