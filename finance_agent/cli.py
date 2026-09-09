@@ -186,6 +186,8 @@ def main():
         add_transaction("expense", args.amount, args.category, args.date, args.note)
     elif args.cmd == "income":
         add_transaction("income", args.amount, args.category, args.date, args.note)
+    elif args.cmd == "help":
+        print("Available commands: add, set-budget, show-budget, summary, export")
     else:
         print("No command provided. Use --help for usage.")
 
