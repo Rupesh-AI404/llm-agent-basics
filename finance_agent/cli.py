@@ -16,6 +16,8 @@ from datetime import datetime, date
 from pathlib import Path
 from typing import Dict, Any, List
 
+from dotenv import parser
+
 DATA_PATH = Path.home() / ".finance_agent_data.json"
 
 DEFAULT_DATA: Dict[str, Any] = {
@@ -192,6 +194,7 @@ def main():
         set_budget(args.amount)
     else:
         print("No command provided. Use --help for usage.")
+        parser.print_help()
 
 
 if __name__ == "__main__":
