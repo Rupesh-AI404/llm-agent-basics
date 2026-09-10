@@ -56,6 +56,7 @@ def add_transaction(t_type: str, amount: float, category: str, dt: str, note: st
         "note": note or "",
         "budgets": {},
         "settings": {},
+        "expenses": {},
     }
     data.setdefault("transactions", []).append(txn)
     save_data(data)
