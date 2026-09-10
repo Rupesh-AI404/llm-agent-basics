@@ -164,6 +164,7 @@ def parse_args():
     summ.add_argument("--month", type=int, default=date.today().month)
     summ.add_argument("-c", "--category", default="uncategorized")
     summ.add_argument("-y", "--year", type=int, default=date.today().year)
+    summ.add_argument("-m", "--month", type=int, default=date.today().month)
 
     exp = sub.add_parser("export", help="Export all transactions to CSV")
     exp.add_argument("path", help="Output CSV path")
