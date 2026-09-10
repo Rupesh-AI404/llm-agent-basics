@@ -86,6 +86,7 @@ def summary(year: int, month: int) -> None:
     total_income = 0.0
     total_expense = 0.0
     by_category = {}
+    sorted_txns = sorted(txns, key=lambda x: x.get("date", ""), reverse=True)
 
 
 
