@@ -201,6 +201,10 @@ def main():
         print("Available commands: add, set-budget, show-budget, summary, export")
     elif args.cmd == "set-budget":
         set_budget(args.amount)
+    elif args.cmd == "show-budget":
+        show_budget()
+    elif args.cmd == "summary":
+        summary(args.year, args.month)
 
     else:
         print("No command provided. Use --help for usage.")
