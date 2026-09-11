@@ -106,6 +106,7 @@ def summary(year: int, month: int) -> None:
                 cat = t.get("category", "uncategorized")
                 by_category[cat] = by_category.get(cat, 0.0) + amt
 
+
     net = total_income - total_expense
     print(f"Summary for {year}-{month:02d}")
     print(f"  Income:  {total_income:.2f}")
