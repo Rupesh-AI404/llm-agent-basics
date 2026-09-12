@@ -205,6 +205,8 @@ def main():
         show_budget()
     elif args.cmd == "summary":
         summary(args.year, args.month)
+    elif args.cmd == "export":
+        export_csv(args.path)
 
     else:
         print("No command provided. Use --help for usage.")
