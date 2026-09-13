@@ -81,6 +81,7 @@ def show_budget() -> None:
         print(f"Set monthly budget to: {b}")
 
 
+
 def summary(year: int, month: int) -> None:
     data = load_data()
     txns: List[Dict[str, Any]] = data.get("transactions", [])
@@ -116,6 +117,7 @@ def summary(year: int, month: int) -> None:
         print("  Expenses by category:")
         for c, v in sorted(by_category.items(), key=lambda x: -x[1]):
             print(f"    {c}: {v:.2f}")
+            print(f"")
 
     # Simple budget suggestion
     monthly_budget = data.get("budgets", {}).get("monthly")
