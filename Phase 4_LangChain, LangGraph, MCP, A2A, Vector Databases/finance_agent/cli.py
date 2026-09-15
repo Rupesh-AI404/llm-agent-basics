@@ -213,6 +213,8 @@ def main():
         summary(args.year, args.month)
     elif args.cmd == "export":
         export_csv(args.path)
+    elif args.cmd == "expense":
+        export_csv(args.path)
 
     else:
         print("No command provided. Use --help for usage.")
