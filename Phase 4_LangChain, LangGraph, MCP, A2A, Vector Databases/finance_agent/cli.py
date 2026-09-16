@@ -169,6 +169,7 @@ def parse_args():
     sb.add_argument("-y", "--year", type=int, default=date.today().year)
     sb.add_argument("-m", "--month", type=int, default=date.today().month)
     sb.add_argument("-c", "--category", default="uncategorized")
+    sb.add_argument("-y", "--year", type=int, default=date.today().year)
 
     summ = sub.add_parser("summary", help="Show monthly summary")
     summ.add_argument("--year", type=int, default=date.today().year)
