@@ -215,6 +215,8 @@ def main():
         export_csv(args.path)
     elif args.cmd == "expense":
         export_csv(args.path)
+    elif args.cmd == "income":
+        add_transaction("income", args.amount, args.category, args.date, args.note)
 
     else:
         print("No command provided. Use --help for usage.")
