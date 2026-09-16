@@ -184,6 +184,7 @@ def parse_args():
     exp.add_argument("-m", "--month", type=int, default=date.today().month)
     exp.add_argument("-d", "--date", default="", help="ISO date (YYYY-MM-DD)")
     exp.add_argument("-y", "--year", type=int, default=date.today().year)
+    exp.add_argument("-m", "--month", type=int, default=date.today().month)
     return p.parse_args()
 
 
