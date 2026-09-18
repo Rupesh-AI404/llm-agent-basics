@@ -10,7 +10,8 @@ load_dotenv()
 async def call_llm_async(
         session: aiohttp.ClientSession,
         prompt: str,
-        user_id: str
+        user_id: str,
+        session_id: str,
 ) -> dict:
     """
     Async version of LLM call.
