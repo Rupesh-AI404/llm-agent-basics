@@ -23,7 +23,8 @@ async def call_llm_async(
         "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}",
         "Content-Type": "application/json",
         "data-encoding": "utf-8",
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "Accept-Language": "en-US",
     }
 
     payload = {
