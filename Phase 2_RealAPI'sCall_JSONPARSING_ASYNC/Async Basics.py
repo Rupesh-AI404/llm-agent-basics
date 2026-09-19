@@ -12,6 +12,7 @@ async def call_llm_async(
         prompt: str,
         user_id: str,
         session_id: str,
+        token: str,
 ) -> dict:
     """
     Async version of LLM call.
