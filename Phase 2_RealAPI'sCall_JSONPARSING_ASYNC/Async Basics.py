@@ -86,6 +86,7 @@ if __name__ == "__main__":
     # asyncio.run() starts the async event loop
     all_responses = asyncio.run(handle_multiple_users())
     print(all_responses)
+    print(f"All responses received: {len(all_responses)}")
 
     print("-" * 50)
     print("\nSUMMARY:")
