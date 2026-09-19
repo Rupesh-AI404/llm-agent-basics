@@ -88,6 +88,7 @@ if __name__ == "__main__":
     for result in all_responses:
         if result["success"]:
             print(f"  {result['user_id']}: {result['response'][:60]}...")
+            print(f"    {result['response'][-60:]}")
         else:
             print(f"  {result['user_id']}: FAILED - {result.get('error')}")
             print(f"    {result['response']}")
