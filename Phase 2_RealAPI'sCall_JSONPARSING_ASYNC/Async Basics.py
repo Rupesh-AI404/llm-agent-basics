@@ -67,7 +67,8 @@ async def handle_multiple_users():
             call_llm_async(session, "what's the weather today?", "user_6"),
             call_llm_async(session, "What's the weather yesterday?", "user_7"),
             call_llm_async(session, "What's the weather today?", "user_8"),
-            call_llm_async(session, "What's the weather today?", "user_9"),
+            call_llm_async(session, "What's the weather tomorrow?", "user_9"),
+            call_llm_async(session, "What's the weather today?", "user_10"),
         ]
 
         # Run all tasks at the same time and wait for ALL to complete
