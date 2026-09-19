@@ -25,6 +25,7 @@ async def call_llm_async(
         "data-encoding": "utf-8",
         "Accept": "application/json",
         "Accept-Language": "en-US",
+        "User-Agent": "Python-Client/0.1.0",
     }
 
     payload = {
