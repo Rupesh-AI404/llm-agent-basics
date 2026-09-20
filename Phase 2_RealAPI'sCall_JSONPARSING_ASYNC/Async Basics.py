@@ -83,6 +83,7 @@ if __name__ == "__main__":
     print("Starting 3 simultaneous requests...")
 
 
+
     # asyncio.run() starts the async event loop
     all_responses = asyncio.run(handle_multiple_users())
     print(all_responses)
