@@ -35,6 +35,7 @@ async def call_llm_async(
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.7,
         "max_tokens": 150,
+        "session_id": session_id,
     }
 
     try:
