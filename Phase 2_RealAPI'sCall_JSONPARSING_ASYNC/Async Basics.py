@@ -27,6 +27,7 @@ async def call_llm_async(
         "Accept": "application/json",
         "Accept-Language": "en-US",
         "User-Agent": "Python-Client/0.1.0",
+        "x-api-key": token,
     }
 
     payload = {
