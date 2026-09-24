@@ -18,6 +18,7 @@ def call_openai(prompt: str) -> str:
     print(f"API call to {url}")
     payload = {
         "prompt": prompt,
+        "max_tokens": 150,
     }
 
     # Your ID badge to prove you're allowed in
