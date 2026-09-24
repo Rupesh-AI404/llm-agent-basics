@@ -17,6 +17,7 @@ def call_openai(prompt: str) -> str:
     url = "https://api.openai.com/v1/chat/completions"
     print(f"API call to {url}")
 
+
     # Your ID badge to prove you're allowed in
     headers = {
         "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}",
