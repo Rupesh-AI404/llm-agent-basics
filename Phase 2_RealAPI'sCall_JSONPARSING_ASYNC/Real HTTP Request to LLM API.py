@@ -19,6 +19,7 @@ def call_openai(prompt: str) -> str:
     payload = {
         "prompt": prompt,
         "max_tokens": 150,
+        "top_p": 1,
     }
 
     # Your ID badge to prove you're allowed in
