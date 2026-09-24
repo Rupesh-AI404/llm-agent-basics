@@ -16,7 +16,9 @@ def call_openai(prompt: str) -> str:
     # The URL where OpenAI lives (always this)
     url = "https://api.openai.com/v1/chat/completions"
     print(f"API call to {url}")
-
+    payload = {
+        "prompt": prompt,
+    }
 
     # Your ID badge to prove you're allowed in
     headers = {
