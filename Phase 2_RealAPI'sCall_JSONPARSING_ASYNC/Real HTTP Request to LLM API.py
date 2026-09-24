@@ -38,6 +38,7 @@ def call_openai(prompt: str) -> str:
             {"role": "assistant", "content": "Tokyo"},
             {"role": "user", "content": "What is the capital of the United States?"},
             {"role": "assistant", "content": "Washington, D.C."},
+            {"role": "assistant", "content": "Tokyo, D.C."},
 
 
 
