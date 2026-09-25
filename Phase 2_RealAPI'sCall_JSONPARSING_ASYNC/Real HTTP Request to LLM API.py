@@ -47,7 +47,44 @@ def call_openai(prompt: str) -> str:
             {"role": "assistant", "content": "Tokyo, D.C."},
             {"role": "assistant", "content": "Japan, D.C."},
 
-    print("Sending request to OpenAI API...")
+        ],
+        "temperature": 0.7,  # How creative to be (0=robot, 1=wild)
+        "max_tokens": 150,  # How long the response can be
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "stream": False,
+        "n": 1,
+    }
+
+    try:
+        # Send the request and wait for response
+        response = requests.post(url, headers=headers, json=payload)
+
+        # If status code is not 200, raise an exception
+        response.raise_for_status()
+
+        # Convert JSON string to Python dictionary
+        result = response.json()
+        response.close()
+        print(f"API response: {result}")
+
+        # Navigate through the nested response to get the text
+        # OpenAI returns: result["choices"][0]["message"]["content"]
+        reply = result["choices"][0]["message"]["content"]
+        print(f"API reply: {reply}")
+
+        return reply
+
+    except requests.exceptions.RequestException as e:
+        print(f"API call failed: {e}")
+        return None
+    except json.JSONDecodeError as e:
+        print(f"API returned invalid JSON: {e}")
+
+    finally:
+        print("API call completed.")
+        return None
 
 
 
