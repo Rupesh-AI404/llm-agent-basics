@@ -47,6 +47,9 @@ def call_openai(prompt: str) -> str:
             {"role": "assistant", "content": "Tokyo, D.C."},
             {"role": "assistant", "content": "Japan, D.C."},
 
+    print("Sending request to OpenAI API...")
+
+
 
 
 
