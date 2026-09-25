@@ -74,6 +74,7 @@ def call_openai(prompt: str) -> str:
         # OpenAI returns: result["choices"][0]["message"]["content"]
         reply = result["choices"][0]["message"]["content"]
         print(f"API reply: {reply}")
+        print(f"API reply length: {len(reply)} characters")
 
         return reply
 
