@@ -46,6 +46,7 @@ def call_openai(prompt: str) -> str:
             {"role": "assistant", "content": "Washington, D.C."},
             {"role": "assistant", "content": "Tokyo, D.C."},
             {"role": "assistant", "content": "Japan, D.C."},
+            {"role": "assistant", "content": "Tokyo, D.C."},
 
         ],
         "temperature": 0.7,  # How creative to be (0=robot, 1=wild)
@@ -56,6 +57,7 @@ def call_openai(prompt: str) -> str:
         "stream": False,
         "n": 1,
         "echo": False,
+        "n"
     }
 
     try:
