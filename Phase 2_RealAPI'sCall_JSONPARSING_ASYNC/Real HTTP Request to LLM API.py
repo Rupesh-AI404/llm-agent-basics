@@ -31,7 +31,8 @@ def call_openai(prompt: str) -> str:
         "OpenAI-Organization": "org-12345",
         "OpenAI-Beta": "assistants=v2",
         "OpenAI-Beta-Assistant": "asst_12345",
-        "OpenAI-Beta-Runtime": "edge-runtime-12345"
+        "OpenAI-Beta-Runtime": "edge-runtime-12345",
+        "User-Agent": "My-Agent/1.0.0",
     }
 
     # The actual message you're sending
