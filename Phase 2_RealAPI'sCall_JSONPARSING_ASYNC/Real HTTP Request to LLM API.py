@@ -21,6 +21,10 @@ def call_openai(prompt: str) -> str:
         "max_tokens": 150,
         "top_p": 1,
         "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "stream": False,
+        "n": 1,
+        "echo": False,
     }
 
     # Your ID badge to prove you're allowed in
