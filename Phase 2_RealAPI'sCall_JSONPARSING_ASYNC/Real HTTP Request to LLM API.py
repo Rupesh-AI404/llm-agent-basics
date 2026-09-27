@@ -66,6 +66,7 @@ def call_openai(prompt: str) -> str:
     try:
         # Send the request and wait for response
         response = requests.post(url, headers=headers, json=payload)
+        response.close()
 
         # If status code is not 200, raise an exception
         response.raise_for_status()
