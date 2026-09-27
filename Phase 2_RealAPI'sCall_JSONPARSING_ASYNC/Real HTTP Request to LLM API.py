@@ -50,8 +50,6 @@ def call_openai(prompt: str) -> str:
             {"role": "user", "content": "What is the capital of the United States?"},
             {"role": "assistant", "content": "Washington, D.C."},
             {"role": "assistant", "content": "Tokyo, D.C."},
-            {"role": "assistant", "content": "Japan, D.C."},
-            {"role": "assistant", "content": "Tokyo, D.C."},
 
         ],
         "temperature": 0.7,  # How creative to be (0=robot, 1=wild)
