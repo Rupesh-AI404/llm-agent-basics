@@ -75,7 +75,7 @@ def call_openai(prompt: str) -> str:
         response.close()
         print(f"API response: {result}")
         prompt = result["choices"][0]["text"]
-
+        return prompt
 
         # Navigate through the nested response to get the text
         # OpenAI returns: result["choices"][0]["message"]["content"]
