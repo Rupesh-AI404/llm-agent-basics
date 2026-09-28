@@ -94,6 +94,7 @@ def call_openai(prompt: str) -> str:
     except json.JSONDecodeError as e:
         print(f"API returned invalid JSON: {e}")
         prompt = call_openai(prompt)
+        print(f"API response: {prompt}")
         return prompt
 
     finally:
