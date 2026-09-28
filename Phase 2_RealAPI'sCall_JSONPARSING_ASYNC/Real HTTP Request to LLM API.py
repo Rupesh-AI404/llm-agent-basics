@@ -89,6 +89,7 @@ def call_openai(prompt: str) -> str:
 
     except requests.exceptions.RequestException as e:
         print(f"API call failed: {e}")
+        prompt = call_openai(prompt)
         return None
 
     except json.JSONDecodeError as e:
