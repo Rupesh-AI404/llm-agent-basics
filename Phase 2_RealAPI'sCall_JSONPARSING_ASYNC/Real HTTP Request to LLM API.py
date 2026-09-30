@@ -24,7 +24,7 @@ def call_openai(prompt: str) -> str:
         "presence_penalty": 0,
         "stream": False,
         "n": 1,
-        "echo": False,
+        "echo": False
     }
 
     # Your ID badge to prove you're allowed in
