@@ -25,7 +25,6 @@ def call_openai(prompt: str) -> str:
         "stream": False,
         "n": 1,
         "echo": False,
-        "stop": None
     }
 
     # Your ID badge to prove you're allowed in
