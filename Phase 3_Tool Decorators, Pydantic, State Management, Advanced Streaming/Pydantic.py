@@ -33,6 +33,7 @@ class EmailAction(BaseModel):
         return v
 
 
+
 class AgentResponse(BaseModel):
     """What your agent returns to the user."""
     action: str = Field(..., description="Action taken: weather, email, chat, search")
