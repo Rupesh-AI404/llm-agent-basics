@@ -24,7 +24,8 @@ class EmailAction(BaseModel):
     to: str = Field(..., description="Recipient email address")
     subject: str = Field(..., description="Email subject line", max_length=100)
     body: str = Field(..., description="Email body content")
-    priority: str = Field(default="normal", description="Priority: low, normal, high")
+    priority: str = Field(default="normal", description="Priority: Low, Normal, High")
+
 
     @field_validator('to')
     def validate_email(cls, v):
