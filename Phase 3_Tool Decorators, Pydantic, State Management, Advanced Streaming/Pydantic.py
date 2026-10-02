@@ -27,6 +27,7 @@ class EmailAction(BaseModel):
     priority: str = Field(default="normal", description="Priority: Low, Normal, High")
 
 
+
     @field_validator('to')
     def validate_email(cls, v):
         if '@' not in v or '.' not in v:
