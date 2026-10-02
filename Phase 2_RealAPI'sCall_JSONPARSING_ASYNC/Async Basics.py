@@ -37,7 +37,8 @@ async def call_llm_async(
         "temperature": 0.7,
         "max_tokens": 150,
         "session_id": session_id,
-        "extra": "data"
+        "extra": "data",
+        "extra_data": "more data",
     }
 
     try:
