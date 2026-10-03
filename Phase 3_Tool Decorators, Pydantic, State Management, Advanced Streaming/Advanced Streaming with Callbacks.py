@@ -114,6 +114,7 @@ def demo_streaming():
     handler.on(StreamEventType.WORD, on_word)
     handler.on(StreamEventType.SENTENCE, on_sentence)
     handler.on(StreamEventType.COMPLETE, on_complete)
+    handler.complete()
 
     # Simulate streaming chunks
     handler._emit(StreamEvent(StreamEventType.START, None, 0))
