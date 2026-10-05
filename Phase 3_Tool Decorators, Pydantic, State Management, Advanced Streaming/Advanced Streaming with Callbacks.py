@@ -62,8 +62,9 @@ class StreamingHandler:
                     self._emit(StreamEvent(StreamEventType.WORD, word, time.time()))
             self._buffer = words[-1]  # Keep incomplete word
 
-        # Detect sentence boundaries (., !, ?)
-        sentence_endings = ['. ', '! ', '? ', '.\n', '!\n', '?\n']
+
+        # Detect sentence boundaries (., !, ?, :)
+        sentence_endings = ['. ', '! ', '? ', '.\n', '!\n', '?\n', ":\n"]
         for ending in sentence_endings:
             if ending in self._buffer:
                 sentences = self._buffer.split(ending)
