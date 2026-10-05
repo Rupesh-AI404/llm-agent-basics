@@ -131,7 +131,8 @@ def demo_streaming():
         "o is 72 degre",
         "es and sunny.",
         " It's a great d",
-        "ay to visit!"
+        "ay to visit!",
+        "hello there"
     ]
 
     for chunk in chunks:
