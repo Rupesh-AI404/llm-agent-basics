@@ -82,7 +82,7 @@ class StreamingHandler:
             self._emit(StreamEvent(StreamEventType.WORD, self._buffer, time.time()))
             self._emit(StreamEvent(StreamEventType.SENTENCE, self._buffer, time.time()))
             self._emit(StreamEvent(StreamEventType.CHUNK, self._buffer, time.time()))
-            self._emit(StreamEvent(StreamEventType.CHUNK, self._buffer, time.time()))
+
 
         # Emit complete event
         self._emit(StreamEvent(StreamEventType.COMPLETE, self._full_response, time.time()))
