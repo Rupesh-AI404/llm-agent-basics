@@ -72,7 +72,6 @@ agent_executor = AgentExecutor(
 if __name__ == "__main__":
     print("=" * 50)
     print("LANGCHAIN AGENT DEMO")
-    print("=" * 50)
 
     # Test 1: Weather question
     print("\n📝 User: What's the weather in Tokyo?")
