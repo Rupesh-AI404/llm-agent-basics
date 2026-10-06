@@ -113,8 +113,6 @@ def demo_streaming():
     def on_complete(event):
         print(f"\n✅ Complete! Total length: {len(event.data)} chars")
 
-    def on_error(event):
-        print(f"❌ Error: {event.data}")
 
     handler.on(StreamEventType.START, on_start)
     handler.on(StreamEventType.WORD, on_word)
