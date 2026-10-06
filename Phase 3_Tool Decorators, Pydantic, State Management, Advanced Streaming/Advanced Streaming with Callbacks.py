@@ -132,7 +132,8 @@ def demo_streaming():
         "es and sunny.",
         " It's a great d",
         "ay to visit!",
-        "hello there"
+        "hello there",
+        "welcome"
     ]
 
     for chunk in chunks:
