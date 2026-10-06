@@ -64,7 +64,7 @@ class StreamingHandler:
 
 
         # Detect sentence boundaries (., !, ?, :)
-        sentence_endings = ['. ', '! ', '? ', '.\n', '!\n', '?\n', ":\n"]
+        sentence_endings = ['. ', '! ', '? ', '.\n', '!\n', '?\n']
         for ending in sentence_endings:
             if ending in self._buffer:
                 sentences = self._buffer.split(ending)
