@@ -58,6 +58,7 @@ tools = [get_weather, get_current_time]
 agent = create_tool_calling_agent(
     llm=llm,
     tools=tools,
+    prompt=prompt,
 )
 
 # ============= STEP 5: CREATE THE AGENT EXECUTOR =============
