@@ -90,3 +90,8 @@ if __name__ == "__main__":
     result = agent_executor.invoke({"input": "What's the weather and time?"})
     print(f"🤖 Agent: {result['output']}")
     print("\n" + "=" * 50)
+
+    #Test 4: Question that requires both tools
+    print("\n" + "-" * 30)
+    result = agent_executor.invoke({"input": "What's the weather in London and what time is it there?"})
+    print(f"🤖 Agent: {result['output']}")
