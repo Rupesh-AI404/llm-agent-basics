@@ -65,7 +65,7 @@ agent_executor = AgentExecutor(
     agent=agent,
     tools=tools,
     verbose=True,  # Shows you what the agent is thinking
-    max_iterations=3  # Prevent infinite loops
+    max_iterations=3,  # Prevent infinite loops
 )
 
 # ============= STEP 6: RUN THE AGENT =============
