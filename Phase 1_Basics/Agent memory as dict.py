@@ -27,7 +27,6 @@ conversation_memory = {
         "travel_mode": None,
         "travel_class": None,
         "confirmation": None,
-        "pending_confirmation": False
     }
 }
 
