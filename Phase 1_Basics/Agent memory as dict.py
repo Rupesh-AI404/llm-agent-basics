@@ -61,10 +61,9 @@ for word in words:
         conversation_memory["extracted_data"]["travel_class"] = word
         print(f"User wants to travel with {word} class!")
 
-    if word in ["yes", "no"]:
-        conversation_memory["extracted_data"]["confirmation"] = word
-        print(f"User wants confirmation!")
+        if word in ["yes", "no"]:
+            conversation_memory["extracted_data"]["confirmation"] = word
+            print(f"User wants confirmation!")
 
-
-
-
+        if word in ["kathmandu", "chitwan"]:
+             conversation_memory["extracted_data"]["destination"] = word
