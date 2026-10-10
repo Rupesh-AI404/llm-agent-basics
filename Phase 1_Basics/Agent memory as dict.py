@@ -37,6 +37,7 @@ print(f"Last user said: {last_message}")
 if "kathmandu" in last_message:
     conversation_memory["extracted_data"]["destination"] = "Kathmandu"
     print(f"User wants to travel to {last_message}!")
+    print
 
 words = last_message.split()
 for word in words:
