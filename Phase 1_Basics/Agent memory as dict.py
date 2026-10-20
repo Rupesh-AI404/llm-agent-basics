@@ -26,6 +26,7 @@ conversation_memory = {
         "date": None, # Will fill later
         "passenger_count": None,
         "preferences": [],
+        "confirmation": None
 
     }
 }
