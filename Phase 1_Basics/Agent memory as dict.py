@@ -54,6 +54,11 @@ for word in words:
         conversation_memory["extracted_data"]["preferences"].append(word)
         print(f"User wants {word}!")
 
+    if word in ["confirm", "confirmation"]:
+        conversation_memory["extracted_data"]["confirmation"] = True
+        print(f"User wants confirmation!")
+
+
 
 
 
