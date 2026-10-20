@@ -59,6 +59,10 @@ for word in words:
         conversation_memory["extracted_data"]["confirmation"] = True
         print(f"User wants confirmation!")
 
+    if word in ["two", "three"]:
+        conversation_memory["extracted_data"]["passenger_count"] += 1
+        print(f"User wants {word}!")
+
 
 
 
