@@ -16,8 +16,7 @@ conversation_memory = {
         {"role": "assistant", "content": "Do you have any luggage?"},
         {"role": "user", "content": "Yes"},
         {"role": "assistant", "content": "Do you need confirmation?"},
-        {"role": "user", "content": "Yes"},
-        {"role": "assistant", "content": "Thank you! Your flight has been booked."},
+
     ],
     "extracted_data": {
         "destination": "Kathmandu",
