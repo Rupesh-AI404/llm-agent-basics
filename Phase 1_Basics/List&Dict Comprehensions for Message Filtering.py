@@ -9,7 +9,8 @@ conversation = [
     {"role": "user", "content": "In Tokyo", "timestamp": 7},
     {"role": "assistant", "content": "What time?", "timestamp": 8},
     {"role": "user", "content": "Anytime", "timestamp": 9},
-    {"role": "assistant", "content": "Sure, 11:30.", "timestamp": 10}
+    {"role": "assistant", "content": "Sure, 11:30.", "timestamp": 10},
+    {"role": "user", "content": "Sure, 11:30.", "timestamp": 11},
 ]
 
 # Remove empty or whitespace-only messages
