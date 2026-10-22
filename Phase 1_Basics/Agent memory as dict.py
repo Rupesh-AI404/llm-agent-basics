@@ -27,7 +27,6 @@ conversation_memory = {
         "passenger_count": None,
         "preferences": [],
         "confirmation": None
-
     }
 }
 
