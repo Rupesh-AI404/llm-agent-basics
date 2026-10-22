@@ -21,7 +21,8 @@ def search_web(query: str) -> str:
     mock_results = {
         "AI trends": "Top AI trends in 2025: 1. Agentic AI systems that autonomously complete tasks. 2. Multi-modal models combining text, image, and video. 3. Smaller, efficient models running on edge devices.",
         "machine learning": "Key ML breakthroughs: 1. Test-time training for rapid adaptation. 2. Mixture of Experts for efficiency. 3. Self-supervised learning reducing need for labeled data.",
-        "LLM agents": "LLM agents are evolving from simple chatbots to complex reasoning systems with memory, planning, and tool use capabilities."
+        "LLM agents": "LLM agents are evolving from simple chatbots to complex reasoning systems with memory, planning, and tool use capabilities.",
+        "RAG": "Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation to produce more accurate and relevant responses."
     }
 
     for key, value in mock_results.items():
