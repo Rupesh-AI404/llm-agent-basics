@@ -24,6 +24,7 @@ def search_web(query: str) -> str:
         "LLM agents": "LLM agents are evolving from simple chatbots to complex reasoning systems with memory, planning, and tool use capabilities.",
         "RAG": "Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation to produce more accurate and relevant responses.",
         "vector databases": "Vector databases store embeddings for fast similarity search, enabling applications like semantic search, recommendation systems, and AI agents.",
+        "multi-step reasoning": "Multi-step reasoning allows AI agents to break down complex problems into smaller steps, improving accuracy and interpretability of their solutions."
     }
 
     for key, value in mock_results.items():
