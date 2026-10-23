@@ -27,7 +27,7 @@ def search_web(query: str) -> str:
         "multi-step reasoning": "Multi-step reasoning allows AI agents to break down complex problems into smaller steps, improving accuracy and interpretability of their solutions.",
         "AI agents": "AI agents are autonomous systems that can perceive their environment, make decisions, and take actions to achieve specific goals, often using LLMs and tool integration.",
         "tool integration": "Tool integration allows AI agents to use external APIs, databases, and services to enhance their capabilities and provide more accurate responses.",
-        "latest developments": "Recent developments in AI include improved reasoning capabilities, longer context windows,
+        "latest developments": "Recent developments in AI include improved reasoning capabilities, longer context windows, better tool integration, and the emergence of agentic AI systems that can autonomously complete tasks."
     }
 
     for key, value in mock_results.items():
